@@ -1,0 +1,13 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+C1,1206,1,10uf,
+C2,1206,1,1uf,
+"C3, C4",CP_Elec_6.3x7.7,2,100uf,
+"D1, D4",D_SOD-323_HandSoldering,2,1N5819WS,
+"D2, D3",0805,2,LED,
+J1,JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal,1,Conn_01x04_MountingPin,
+J2,JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal,1,Conn_01x02_MountingPin,
+L2,L_APV_APH1265,1,4.7uH,
+R1,0603,1,330k,
+R2,0603,1,51k,
+"R3, R4",0603,2,10k,
+U1,SOT-23-6_DBV_TEX,1,TLV61048DBVR,

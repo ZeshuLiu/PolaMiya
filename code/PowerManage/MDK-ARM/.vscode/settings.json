@@ -1,0 +1,7 @@
+{
+    "debug.hideSlowPreLaunchWarning": true,
+    "clangd.arguments": [
+        "--compile-commands-dir=e:\\Develop\\PolaMiya\\code\\PowerManage\\MDK-ARM\\out\\PowerManage\\PowerManage"
+    ],
+    "cmake.ignoreCMakeListsMissing": true
+}

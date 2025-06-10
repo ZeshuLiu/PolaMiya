@@ -1,0 +1,10 @@
+solution:
+  created-by: uv2csolution@1.6.0
+  created-for: CMSIS-Toolbox@2.7.0
+  compiler: AC6
+  target-types:
+    - type: PowerManage
+      device: STM32L011D4Px
+      optimize: debug
+  projects:
+    - project: PowerManage.cproject.yml
