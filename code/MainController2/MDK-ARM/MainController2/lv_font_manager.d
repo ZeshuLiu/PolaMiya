@@ -1,0 +1,28 @@
+maincontroller2/lv_font_manager.o: \
+  ..\Libs\lvgl\src\others\font_manager\lv_font_manager.c \
+  ..\Libs\lvgl\src\others\font_manager\lv_font_manager.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\lv_font.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\lv_conf_kconfig.h \
+  ..\Libs\lvgl\lv_conf.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\misc\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\lv_symbol_def.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\lv_draw_buf.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\lv_area.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\lv_math.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\lv_color.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\lv_assert.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\lv_log.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\..\stdlib\lv_mem.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\..\stdlib\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\..\stdlib\lv_string.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\..\stdlib\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\lv_palette.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\misc\lv_color_op.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\stdlib\lv_string.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\lv_image_dsc.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\draw\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\others\font_manager\..\..\font\..\misc\lv_area.h

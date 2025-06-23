@@ -1,0 +1,30 @@
+maincontroller2/lv_draw_sw_utils.o: \
+  ..\Libs\lvgl\src\draw\sw\lv_draw_sw_utils.c \
+  ..\Libs\lvgl\src\draw\sw\lv_draw_sw_utils.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\lv_conf_kconfig.h \
+  ..\Libs\lvgl\lv_conf.h ..\Libs\lvgl\src\draw\sw\..\..\misc\lv_area.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\lv_math.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\lv_color.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\lv_assert.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\lv_log.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\..\stdlib\lv_mem.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\..\stdlib\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\..\stdlib\lv_string.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\..\stdlib\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\lv_palette.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\misc\lv_color_op.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\lv_display.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\lv_timer.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\..\tick\lv_tick.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\..\tick\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\..\tick\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\lv_ll.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\lv_event.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\lv_array.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\lv_color.h \
+  ..\Libs\lvgl\src\draw\sw\..\..\display\..\misc\lv_area.h

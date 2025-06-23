@@ -1,0 +1,24 @@
+maincontroller2/lv_cache_lru_rb.o: \
+  ..\Libs\lvgl\src\misc\cache\class\lv_cache_lru_rb.c \
+  ..\Libs\lvgl\src\misc\cache\class\lv_cache_lru_rb.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\lv_cache_private.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\lv_types.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\lv_conf_kconfig.h \
+  ..\Libs\lvgl\lv_conf.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\osal\lv_os.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\osal\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\osal\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\osal\lv_os_none.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\lv_cache_entry.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\stdlib\lv_sprintf.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\stdlib\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\stdlib\lv_string.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\stdlib\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\lv_ll.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\lv_rb_private.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\lv_rb.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\lv_assert.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\lv_log.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\..\stdlib\lv_mem.h \
+  ..\Libs\lvgl\src\misc\cache\class\..\..\lv_iter.h

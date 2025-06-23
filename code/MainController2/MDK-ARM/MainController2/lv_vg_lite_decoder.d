@@ -1,0 +1,40 @@
+maincontroller2/lv_vg_lite_decoder.o: \
+  ..\Libs\lvgl\src\draw\vg_lite\lv_vg_lite_decoder.c \
+  ..\Libs\lvgl\src\draw\vg_lite\..\lv_image_decoder_private.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\lv_image_decoder.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\lv_conf_kconfig.h \
+  ..\Libs\lvgl\lv_conf.h ..\Libs\lvgl\src\draw\vg_lite\..\lv_draw_buf.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_area.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_math.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_color.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_assert.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_log.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\..\stdlib\lv_mem.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\..\stdlib\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\..\stdlib\lv_string.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\..\stdlib\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_palette.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_color_op.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\stdlib\lv_string.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\lv_image_dsc.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\lv_fs.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\lv_cache.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\..\lv_types.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\lv_cache_entry.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\lv_cache_class.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\lv_cache_lru_rb.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\..\lv_cache_private.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\..\..\lv_types.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\..\..\..\osal\lv_os.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\..\..\..\osal\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\..\..\..\osal\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\..\..\..\osal\lv_os_none.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\class\lv_cache_lru_ll.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\instance\lv_cache_instance.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\instance\lv_image_header_cache.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\instance\..\..\lv_types.h \
+  ..\Libs\lvgl\src\draw\vg_lite\..\..\misc\cache\instance\lv_image_cache.h \
+  ..\Libs\lvgl\src\draw\vg_lite\lv_vg_lite_decoder.h

@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "tim.h": "c",
+        "main.h": "c",
+        "lcd_usr.h": "c",
+        "pic.h": "c",
+        "dma.h": "c",
+        "zui.h": "c",
+        "lcd_init.h": "c",
+        "spi.h": "c"
+    }
+}

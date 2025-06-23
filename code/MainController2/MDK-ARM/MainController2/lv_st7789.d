@@ -1,0 +1,27 @@
+maincontroller2/lv_st7789.o: \
+  ..\Libs\lvgl\src\drivers\display\st7789\lv_st7789.c \
+  ..\Libs\lvgl\src\drivers\display\st7789\lv_st7789.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\lv_lcd_generic_mipi.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\lv_display.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\lv_conf_kconfig.h \
+  ..\Libs\lvgl\lv_conf.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_timer.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\tick\lv_tick.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\tick\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\tick\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_ll.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_event.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_array.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_color.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_assert.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_log.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\stdlib\lv_mem.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\stdlib\..\lv_conf_internal.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\stdlib\lv_string.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\..\stdlib\..\misc\lv_types.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_math.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_palette.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_color_op.h \
+  ..\Libs\lvgl\src\drivers\display\st7789\..\lcd\..\..\..\display\..\misc\lv_area.h
