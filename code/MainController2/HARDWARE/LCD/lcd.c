@@ -33,8 +33,15 @@ void LCD_DrawArea(uint16_t xsta, uint16_t ysta, uint16_t xend, uint16_t yend, ui
     uint32_t size   = (xend - xsta + 1) * (yend - ysta + 1);
 
     LCD_Address_Set(xsta, ysta, xend, yend);  // 注意：xend/yend 不减1
-
-    HAL_SPI_Transmit(&hspi1, (uint8_t *)color_p, size * 2, HAL_MAX_DELAY);
+		
+		hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
+		hspi1.Instance->CR1|= (1<<11);
+		LCD_DC_Set();//写数据
+		LCD_CS_Clr();
+    HAL_SPI_Transmit(&hspi1, (uint8_t *)color_p, size, HAL_MAX_DELAY);
+		LCD_CS_Set();	
+		hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+		hspi1.Instance->CR1&=~(1<<11);
 }
 
 

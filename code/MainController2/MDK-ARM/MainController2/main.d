@@ -43,4 +43,4 @@ maincontroller2/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\USB_Device\Target\usbd_conf.h ..\Core\Inc\gpio.h \
   ..\HARDWARE\LCD\lcd_usr.h ..\HARDWARE\LCD\lcd_init.h \
   ..\HARDWARE\LCD\lcd.h ..\HARDWARE\LCD\lcdfont.h ..\HARDWARE\LCD\pic.h \
-  ..\Libs\ZUI\zui.h ..\Libs\ZUI\zui_usr.h
+  ..\Libs\ZUI\zui.h ..\Libs\ZUI\zui_usr.h ..\Libs\TMP102\tmp102.h

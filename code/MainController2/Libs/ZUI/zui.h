@@ -7,6 +7,7 @@
 #include "spi.h"
 #include "zui_usr.h"
 #include "lcd_init.h"
+#include "lcdfont.h"
 
 #define DISP_HOR 280
 #define DISP_VER 240
@@ -21,6 +22,7 @@ typedef struct UI_Element {
     void (*render)(struct UI_Element *el, uint16_t *buf);
     uint8_t dirty;
     struct UI_Element *next;
+    uint16_t usr_data_len;  // 用户数据长度
     void *user_data;  // 可选：绑定显示值或状态
 } UI_Element;
 
@@ -35,5 +37,11 @@ void zui_set_current_layer(UI_Layer * tgt_layer);
 void zui_fill_screen_color(uint16_t color, uint16_t *buf);
 void zui_layer_add_element(UI_Layer *layer, UI_Element *el);
 void zui_render_current_layer(void);
+void zui_dirty_layer(UI_Layer * tgt_layer);
+void zui_dirty_current_layer(void);
+
+void char_12_elm_render(struct UI_Element *el, uint16_t *buf);
+void char_16_elm_render(struct UI_Element *el, uint16_t *buf);
+void char_24_elm_render(struct UI_Element *el, uint16_t *buf);
 
 #endif

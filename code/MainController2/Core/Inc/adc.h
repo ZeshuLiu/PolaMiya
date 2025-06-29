@@ -35,13 +35,17 @@ extern "C" {
 extern ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN Private defines */
-
+#define ADC_N_CHANNEL 3
+#define TEMP130_CAL_ADDR ((uint16_t*) ((uint32_t) 0x1FFF75CA)) // 130°C时ADC值
+#define TEMP30_CAL_ADDR  ((uint16_t*) ((uint32_t) 0x1FFF75A8)) // 30°C时ADC值
+// #define VREFINT_CAL_ADDR ((uint16_t*) ((uint32_t) 0x1FFF75AA)) // VREFINT
 /* USER CODE END Private defines */
 
 void MX_ADC1_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+void Z_ADC_DMA_Start(ADC_HandleTypeDef *hadc);
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

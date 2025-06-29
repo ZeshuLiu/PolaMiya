@@ -33,6 +33,7 @@
 #include "lcd_usr.h"
 #include "zui.h"
 #include "zui_usr.h"
+#include "tmp102.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,7 +55,10 @@
 
 /* USER CODE BEGIN PV */
 uint8_t tim2_int_mask = 0;
-
+extern double BAT_V, temperature_cd;
+extern UI_Element zui_elm_char12;
+extern UI_Element bat_elm_char16;
+extern UI_Element batnum_elm_char16;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -78,7 +82,6 @@ int main(void)
   /* USER CODE BEGIN 1 */
   uint8_t a = 0;
 	uint16_t * b = 0;
-  extern UI_Element pure_element;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -114,19 +117,28 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
 
+  // 开始启动
   HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_RESET);
   HAL_Delay(100);
   HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_SET);
+
+  // ADC 初始化
+	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);    //AD校准
+
 
   // 屏幕显示初始化
   HAL_TIM_Base_Start_IT(&htim2);
   zui_init();
 
+  // float t = TMP102_ReadTemperature();
 
   // LCD_Fill(0,0,LCD_W,LCD_H,WHITE);
   // LCD_DrawArea(0, 0, LCD_W, LCD_H,WHITE);
   LCD_Fill(0,0,LCD_W,LCD_H,WHITE);
-  zui_elm_set_dirty(&pure_element);
+  // zui_elm_set_dirty(&batnum_elm_char16);
+  // zui_elm_set_dirty(&bat_elm_char16);
+  // zui_elm_set_dirty(&zui_elm_char12);
+  zui_dirty_current_layer();
   zui_render_current_layer();
   
   HAL_Delay(100);
@@ -142,6 +154,8 @@ int main(void)
     if ( (tim2_int_mask & TIM_INT1S_MASK) != 0){
       tim2_int_mask &= (~TIM_INT1S_MASK);
       HAL_GPIO_TogglePin(KEY3_GPIO_Port, KEY3_Pin);
+      Z_ADC_DMA_Start(&hadc1);
+      TMP102_ReadTemperature();
       // HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_2);
     }
 
@@ -153,6 +167,7 @@ int main(void)
 
     if ( (tim2_int_mask & TIM_INT200MS_MASK) != 0) {
       tim2_int_mask &= (~TIM_INT200MS_MASK);
+			// zui_elm_set_dirty(&pure_element);
       zui_render_current_layer();
       // DRAW_FRAME(0);
       // DRAW_DATA(0);
