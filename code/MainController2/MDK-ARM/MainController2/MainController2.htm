@@ -3,7 +3,7 @@
 <title>Static Call Graph - [MainController2\MainController2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image MainController2\MainController2.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Mon Jun 30 00:04:05 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Mon Jun 30 00:47:54 2025
 <BR><P>
 <H3>Maximum Stack Usage =        644 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -530,14 +530,14 @@ Global Symbols
 <P><STRONG><a name="[1f7]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[31]"></a>ADC1_2_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, stm32g4xx_it.o(.text.ADC1_2_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = ADC1_2_IRQHandler &rArr; HAL_ADC_IRQHandler &rArr; HAL_ADC_ConvCpltCallback &rArr; __aeabi_dmul
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = ADC1_2_IRQHandler &rArr; HAL_ADC_IRQHandler &rArr; HAL_ADC_ConvCpltCallback &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32g431xx.o(RESET)
 </UL>
 <P><STRONG><a name="[68]"></a>ADC_DMAConvCplt</STRONG> (Thumb, 212 bytes, Stack size 16 bytes, stm32g4xx_hal_adc.o(.text.ADC_DMAConvCplt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = ADC_DMAConvCplt &rArr; HAL_ADC_ConvCpltCallback &rArr; __aeabi_dmul
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = ADC_DMAConvCplt &rArr; HAL_ADC_ConvCpltCallback &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ErrorCallback
@@ -788,8 +788,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_ADC1_Init
 </UL>
 
-<P><STRONG><a name="[8a]"></a>HAL_ADC_ConvCpltCallback</STRONG> (Thumb, 472 bytes, Stack size 80 bytes, adc.o(.text.HAL_ADC_ConvCpltCallback))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = HAL_ADC_ConvCpltCallback &rArr; __aeabi_dmul
+<P><STRONG><a name="[8a]"></a>HAL_ADC_ConvCpltCallback</STRONG> (Thumb, 480 bytes, Stack size 72 bytes, adc.o(.text.HAL_ADC_ConvCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = HAL_ADC_ConvCpltCallback &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;float_to_str_1int_3frac
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -818,7 +818,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[88]"></a>HAL_ADC_IRQHandler</STRONG> (Thumb, 1194 bytes, Stack size 64 bytes, stm32g4xx_hal_adc.o(.text.HAL_ADC_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = HAL_ADC_IRQHandler &rArr; HAL_ADC_ConvCpltCallback &rArr; __aeabi_dmul
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = HAL_ADC_IRQHandler &rArr; HAL_ADC_ConvCpltCallback &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_ConvCpltCallback
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADCEx_InjectedQueueOverflowCallback
