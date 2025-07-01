@@ -109,6 +109,17 @@ void zui_dirty_current_layer(void)
     }
 }
 
+/**
+ * @brief 响应按键
+ * 
+ */
+void zui_key_respond(USR_KEY * key)
+{
+    if (!current_layer) return;
+
+    current_layer->on_key(key);
+}
+
 void char_12_elm_render(struct UI_Element *el, uint16_t *buf)
 {
     uint32_t bufi = 0;

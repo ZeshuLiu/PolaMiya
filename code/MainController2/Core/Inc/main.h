@@ -22,6 +22,7 @@
 #ifndef __MAIN_H
 #define __MAIN_H
 
+#include <stdint.h>
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -49,6 +50,9 @@ extern "C" {
 #define TIM_INT1S_MASK        0x01
 
 #define TIM_INTCNT_MAX TIM_INTCNT_1S                // 1s
+
+#define KEY_DEBOUNCE_TIME 10
+#define KEY_LONG_PRESS_TIME 1500
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
@@ -111,6 +115,7 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 #define MY_DISP_HOR_RES    280
 #define MY_DISP_VER_RES    240
+#define USR_KEY_COUNT      3
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

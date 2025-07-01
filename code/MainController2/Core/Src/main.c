@@ -34,6 +34,7 @@
 #include "zui.h"
 #include "zui_usr.h"
 #include "tmp102.h"
+#include <stdint.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,6 +56,9 @@
 
 /* USER CODE BEGIN PV */
 uint8_t tim2_int_mask = 0;
+const GPIO_TypeDef * KEY_Ports[USR_KEY_COUNT] = {KEY0_GPIO_Port, KEY1_GPIO_Port, KEY2_GPIO_Port};
+const uint16_t KEY_Pins[USR_KEY_COUNT] = {KEY0_Pin, KEY1_Pin, KEY2_Pin};
+USR_KEY USR_KEYs[USR_KEY_COUNT];
 extern double BAT_V, temperature_cd;
 extern UI_Element zui_elm_char12;
 extern UI_Element bat_elm_char16;
@@ -64,7 +68,8 @@ extern UI_Element batnum_elm_char16;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void key_init(void);
+void key_scan(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -122,9 +127,11 @@ int main(void)
   HAL_Delay(100);
   HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_SET);
 
+  // 按键初始化
+  key_init();
+
   // ADC 初始化
 	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);    //AD校准
-
 
   // 屏幕显示初始化
   HAL_TIM_Base_Start_IT(&htim2);
@@ -161,6 +168,7 @@ int main(void)
 
     if ( (tim2_int_mask & TIM_INT10MS_MASK) != 0){
       tim2_int_mask &= (~TIM_INT10MS_MASK);
+      key_scan();
       // DRAW_FRAME(0);
       // DRAW_DATA(0);
     }
@@ -174,12 +182,12 @@ int main(void)
     }
 
 
-    if (a == 1){
-      HAL_GPIO_WritePin(EJCMT_EN_GPIO_Port, EJCMT_EN_Pin, GPIO_PIN_SET);
-    }
-    else{
-      HAL_GPIO_WritePin(EJCMT_EN_GPIO_Port, EJCMT_EN_Pin, GPIO_PIN_RESET);
-    }
+    // if (a == 1){
+    //   HAL_GPIO_WritePin(EJCMT_EN_GPIO_Port, EJCMT_EN_Pin, GPIO_PIN_SET);
+    // }
+    // else{
+    //   HAL_GPIO_WritePin(EJCMT_EN_GPIO_Port, EJCMT_EN_Pin, GPIO_PIN_RESET);
+    // }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -241,7 +249,63 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void key_init(void)
+{
+  uint32_t time = HAL_GetTick();
+  uint8_t i = 0;
+  for ( i = 0; i < USR_KEY_COUNT; i++)
+  {
+    USR_KEYs[i].key_index = i;
+    USR_KEYs[i].last_action_time = time;
+    USR_KEYs[i].last_action = HAL_GPIO_ReadPin((GPIO_TypeDef *) KEY_Ports[i], KEY_Pins[i]);
+    USR_KEYs[i].key_action = 0;
+  }
+  HAL_NVIC_DisableIRQ(EXTI0_IRQn);  // KEY 0
+  HAL_NVIC_DisableIRQ(EXTI1_IRQn);  // KEY 1
+  HAL_NVIC_DisableIRQ(EXTI4_IRQn);  // KEY 2
+}
 
+void key_scan(void)
+{
+  uint32_t time = HAL_GetTick();
+  uint8_t i = 0;
+  GPIO_PinState temp;
+
+  for ( i = 0; i < USR_KEY_COUNT; i++)
+  {
+    temp = HAL_GPIO_ReadPin((GPIO_TypeDef *) KEY_Ports[i], KEY_Pins[i]);
+    // 没变化则继续
+    if (temp == USR_KEYs[i].last_action){
+      continue;
+    }
+    // 抖动则赋值后继续
+    if ( time - USR_KEYs[i].last_action_time < KEY_DEBOUNCE_TIME){
+      USR_KEYs[i].last_action = temp;
+      USR_KEYs[i].last_action_time = time;
+      continue;
+    }
+    // 非抖动开始处理
+    // 如果是下降沿,只计时(按下按键)
+    if ( temp == GPIO_PIN_RESET ){
+      USR_KEYs[i].last_action = temp;
+      USR_KEYs[i].last_action_time = time;
+      continue;
+    }
+    // 上升沿,判断时间(松开判断长短按)
+    if ( time - USR_KEYs[i].last_action_time > KEY_LONG_PRESS_TIME){
+      USR_KEYs[i].last_action = temp;
+      USR_KEYs[i].last_action_time = time;
+      USR_KEYs[i].key_action = 2;
+    }
+    else
+    {
+      USR_KEYs[i].last_action = temp;
+      USR_KEYs[i].last_action_time = time;
+      USR_KEYs[i].key_action = 1;
+    }
+    zui_key_respond(&USR_KEYs[i]);
+  }
+}
 /* USER CODE END 4 */
 
 /**

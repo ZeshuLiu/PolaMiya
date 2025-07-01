@@ -22,7 +22,7 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "motor.h"
 /* USER CODE END 0 */
 
 /*----------------------------------------------------------------------------*/
@@ -134,5 +134,16 @@ void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 2 */
-
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  extern uint8_t motor_start_cnt;
+  if (GPIO_Pin == KEY0_Pin)
+  {
+    if (motor_start_cnt++)
+    {
+      motor_end();
+      HAL_NVIC_DisableIRQ(EXTI0_IRQn);
+    }
+  }
+}
 /* USER CODE END 2 */

@@ -38,4 +38,4 @@ maincontroller2/zui_usr.o: ..\Libs\ZUI\zui_usr.c ..\Libs\ZUI\zui_usr.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart_ex.h \
   ..\Libs\ZUI\zui.h ..\HARDWARE\LCD\lcd.h ..\HARDWARE\LCD\lcd_init.h \
   ..\Core\Inc\spi.h ..\HARDWARE\LCD\lcdfont.h ..\Core\Inc\dma.h \
-  ..\HARDWARE\LCD\pic.h
+  ..\HARDWARE\LCD\pic.h ..\Libs\Motors\motor.h

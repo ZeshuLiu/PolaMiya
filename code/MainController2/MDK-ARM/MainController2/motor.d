@@ -1,4 +1,4 @@
-maincontroller2/gpio.o: ..\Core\Src\gpio.c ..\Core\Inc\gpio.h \
+maincontroller2/motor.o: ..\Libs\Motors\motor.c ..\Libs\Motors\motor.h \
   ..\Core\Inc\main.h ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h \
   ..\Core\Inc\stm32g4xx_hal_conf.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc.h \
@@ -35,5 +35,4 @@ maincontroller2/gpio.o: ..\Core\Src\gpio.c ..\Core\Inc\gpio.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart.h \
-  ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart_ex.h \
-  ..\Libs\Motors\motor.h
+  ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart_ex.h

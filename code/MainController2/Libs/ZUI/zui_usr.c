@@ -1,10 +1,10 @@
 #include "zui_usr.h"
-#include <stdint.h>
+#include "motor.h"
 
 /* PURE LAYER*/
 UI_Layer pure_layer;
 UI_Element pure_element;
-void zui_pure_layer_on_key(uint8_t key)
+void zui_pure_layer_on_key(USR_KEY * key)
 {
     return;
 }
@@ -30,13 +30,34 @@ void pure_layer_elm_init(void)
 }
 
 /* Noraml Layer*/
+char keyval_vals[4] = "x-x";
 UI_Layer normal_layer;
 UI_Element bat_elm_char16;
 UI_Element batnum_elm_char16;
+UI_Element key_elm_char16;
+UI_Element keyval_elm_char16;
 UI_Element zui_elm_char12;
 
-void zui_normal_layer_on_key(uint8_t key)
+void zui_normal_layer_on_key(USR_KEY * key)
 {
+    extern uint8_t motor_state;
+
+    keyval_vals[0] = key->key_index + '0' ;
+    keyval_vals[2] = key->key_action + '0' ;
+    keyval_elm_char16.dirty = 1;
+
+    // 按键响应0
+    if (motor_state == 0 && key->key_index == 0 && key->key_action == 2)
+    {
+        motor_start();
+    }
+    else if(motor_state == 1)
+    {
+        // motor_end();
+    }
+
+
+    key->key_action = 0;
     return;
 }
 
@@ -63,6 +84,28 @@ void normal_layer_elm_init(void)
     batnum_elm_char16.usr_data_len = 6;
     batnum_elm_char16.user_data = (uint8_t *) "-.--V";
     zui_layer_add_element(&normal_layer, &batnum_elm_char16);
+
+    key_elm_char16.x = KEY_TITLE_X;
+    key_elm_char16.y = KEY_TITLE_Y;
+    key_elm_char16.w = 50;
+    key_elm_char16.h = 20;
+    key_elm_char16.render = char_16_elm_render;
+    key_elm_char16.dirty = 0;
+    key_elm_char16.next = NULL;
+    key_elm_char16.usr_data_len = 5;
+    key_elm_char16.user_data = (uint8_t *) "KEY:";
+    zui_layer_add_element(&normal_layer, &key_elm_char16);
+
+    keyval_elm_char16.x = KEY_NUM_X;
+    keyval_elm_char16.y = KEY_NUM_Y;
+    keyval_elm_char16.w = 50;
+    keyval_elm_char16.h = 20;
+    keyval_elm_char16.render = char_16_elm_render;
+    keyval_elm_char16.dirty = 0;
+    keyval_elm_char16.next = NULL;
+    keyval_elm_char16.usr_data_len = 4;
+    keyval_elm_char16.user_data = (uint8_t *) keyval_vals;
+    zui_layer_add_element(&normal_layer, &keyval_elm_char16);
 
     zui_elm_char12.x = 20;
     zui_elm_char12.y = 220;

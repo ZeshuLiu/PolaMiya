@@ -203,16 +203,16 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
 /* USER CODE BEGIN 1 */
 char bat_volt_char[6];
 
-void float_to_str_1int_3frac(float value, char *buf) {
+void float_to_str_1int_2frac(float value, char *buf) {
+    value += 0.005f;    // 2位小数（四舍五入）
     int int_part = (int)value;  // 整数部分（0~9）
-    int frac_part = (int)((value - int_part) * 100 + 0.5f); // 三位小数（四舍五入）
+    int frac_part = (int)((value - int_part) * 100 ); // 三位小数（四舍五入）
 
     buf[0] = '0' + int_part;
     buf[1] = '.';
     buf[2] = '0' + (frac_part / 10) % 10;
     buf[3] = '0' + frac_part % 10;
     buf[4] = 'V';
-    // buf[5] = '\0';
 }
 
 
@@ -239,10 +239,11 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
     BAT_V = ( ( (double) (adc_values[0] & 0xfff) ) * vref/(4095.0) ) *2.0;
     temperature_cd = ((adc_values[1] & 0xfff) - TEMP30) * (130.0 - 30.0) / (TEMP130 - TEMP30) + 30.0;
 
-    float_to_str_1int_3frac(BAT_V, (char *) bat_volt_char);
+    float_to_str_1int_2frac(BAT_V, (char *) bat_volt_char);
+    // float_to_str_1int_2frac(3.996, (char *) bat_volt_char);
     batnum_elm_char16.user_data = (uint8_t *) bat_volt_char;
     batnum_elm_char16.dirty = 1;
   }
-
 }
+
 /* USER CODE END 1 */

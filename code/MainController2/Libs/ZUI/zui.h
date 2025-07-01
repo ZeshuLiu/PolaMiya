@@ -9,6 +9,7 @@
 #include "lcd_init.h"
 #include "lcdfont.h"
 
+
 #define DISP_HOR 280
 #define DISP_VER 240
 #define ZUI_BUF_LFRAC 20
@@ -16,6 +17,13 @@
 #define ZUI_BUF_SIZE (ZUI_BUF_LINES * DISP_HOR * 2)
 
 extern uint16_t zui_pixel_buffer0[ZUI_BUF_LINES * DISP_HOR];
+
+typedef struct USR_KEY {
+    uint8_t key_index;
+    uint32_t last_action_time;
+    GPIO_PinState last_action;
+    uint8_t key_action;   // 0-no action 1-short press 2-long press
+} USR_KEY;
 
 typedef struct UI_Element {
     uint16_t x, y, w, h;
@@ -28,7 +36,7 @@ typedef struct UI_Element {
 
 typedef struct {
     UI_Element *head;
-    void (*on_key)(uint8_t key);
+    void (*on_key)(USR_KEY * key);
 } UI_Layer;
 
 void zui_init(void);
@@ -39,6 +47,7 @@ void zui_layer_add_element(UI_Layer *layer, UI_Element *el);
 void zui_render_current_layer(void);
 void zui_dirty_layer(UI_Layer * tgt_layer);
 void zui_dirty_current_layer(void);
+void zui_key_respond(USR_KEY * key);
 
 void char_12_elm_render(struct UI_Element *el, uint16_t *buf);
 void char_16_elm_render(struct UI_Element *el, uint16_t *buf);

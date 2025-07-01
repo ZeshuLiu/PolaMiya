@@ -57,6 +57,7 @@
 "maincontroller2\zui.o"
 "maincontroller2\zui_usr.o"
 "maincontroller2\tmp102.o"
+"maincontroller2\motor.o"
 --strict --scatter "MainController2\MainController2.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
