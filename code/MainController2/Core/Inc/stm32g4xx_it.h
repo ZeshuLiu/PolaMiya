@@ -70,14 +70,13 @@ void USB_LP_IRQHandler(void);
 void TIM2_IRQHandler(void);
 void I2C2_EV_IRQHandler(void);
 void SPI1_IRQHandler(void);
-void USART3_IRQHandler(void);
+void USART2_IRQHandler(void);
 void EXTI15_10_IRQHandler(void);
 void SPI3_IRQHandler(void);
 void DMA2_Channel1_IRQHandler(void);
 void DMA2_Channel2_IRQHandler(void);
 void DMA2_Channel3_IRQHandler(void);
 void DMA2_Channel5_IRQHandler(void);
-void LPUART1_IRQHandler(void);
 void I2C3_EV_IRQHandler(void);
 void DMA2_Channel6_IRQHandler(void);
 /* USER CODE BEGIN EFP */

@@ -1,4 +1,5 @@
-maincontroller2/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
+maincontroller2/sdm18.o: ..\Libs\SDM18\sdm18.c ..\Libs\SDM18\sdm18.h \
+  ..\Core\Inc\usart.h ..\Core\Inc\main.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h \
   ..\Core\Inc\stm32g4xx_hal_conf.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc.h \
@@ -36,12 +37,6 @@ maincontroller2/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart_ex.h \
-  ..\Core\Inc\adc.h ..\Core\Inc\dma.h ..\Core\Inc\i2c.h \
-  ..\Core\Inc\usart.h ..\Core\Inc\rtc.h ..\Core\Inc\spi.h \
-  ..\Core\Inc\tim.h ..\USB_Device\App\usb_device.h \
-  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
-  ..\USB_Device\Target\usbd_conf.h ..\Core\Inc\gpio.h \
-  ..\HARDWARE\LCD\lcd_usr.h ..\HARDWARE\LCD\lcd_init.h \
-  ..\HARDWARE\LCD\lcd.h ..\HARDWARE\LCD\lcdfont.h ..\HARDWARE\LCD\pic.h \
-  ..\Libs\ZUI\zui.h ..\Libs\ZUI\zui_usr.h ..\Libs\TMP102\tmp102.h \
-  ..\Libs\SDM18\sdm18.h
+  ..\Libs\ZUI\zui.h ..\HARDWARE\LCD\lcd.h ..\HARDWARE\LCD\lcd_init.h \
+  ..\Core\Inc\spi.h ..\HARDWARE\LCD\lcdfont.h ..\Core\Inc\dma.h \
+  ..\HARDWARE\LCD\pic.h ..\Libs\ZUI\zui_usr.h

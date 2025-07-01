@@ -31,11 +31,14 @@ void pure_layer_elm_init(void)
 
 /* Noraml Layer*/
 char keyval_vals[4] = "x-x";
+char distanceval_vals[6] = "xx.xx";
 UI_Layer normal_layer;
 UI_Element bat_elm_char16;
 UI_Element batnum_elm_char16;
 UI_Element key_elm_char16;
 UI_Element keyval_elm_char16;
+UI_Element distance_elm_char16;
+UI_Element distanceval_elm_char16;
 UI_Element zui_elm_char12;
 
 void zui_normal_layer_on_key(USR_KEY * key)
@@ -106,6 +109,28 @@ void normal_layer_elm_init(void)
     keyval_elm_char16.usr_data_len = 4;
     keyval_elm_char16.user_data = (uint8_t *) keyval_vals;
     zui_layer_add_element(&normal_layer, &keyval_elm_char16);
+
+    distance_elm_char16.x = DISTANCE_TITLE_X;
+    distance_elm_char16.y = DISTANCE_TITLE_Y;
+    distance_elm_char16.w = 50;
+    distance_elm_char16.h = 20;
+    distance_elm_char16.render = char_16_elm_render;
+    distance_elm_char16.dirty = 0;
+    distance_elm_char16.next = NULL;
+    distance_elm_char16.usr_data_len = 5;
+    distance_elm_char16.user_data = (uint8_t *) "DIS:";
+    zui_layer_add_element(&normal_layer, &distance_elm_char16);
+
+    distanceval_elm_char16.x = DISTANCE_NUM_X;
+    distanceval_elm_char16.y = DISTANCE_NUM_Y;
+    distanceval_elm_char16.w = 50;
+    distanceval_elm_char16.h = 20;
+    distanceval_elm_char16.render = char_16_elm_render;
+    distanceval_elm_char16.dirty = 0;
+    distanceval_elm_char16.next = NULL;
+    distanceval_elm_char16.usr_data_len = 6;
+    distanceval_elm_char16.user_data = (uint8_t *) distanceval_vals;
+    zui_layer_add_element(&normal_layer, &distanceval_elm_char16);
 
     zui_elm_char12.x = 20;
     zui_elm_char12.y = 220;

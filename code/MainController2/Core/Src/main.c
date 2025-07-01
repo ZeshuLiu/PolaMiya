@@ -34,7 +34,7 @@
 #include "zui.h"
 #include "zui_usr.h"
 #include "tmp102.h"
-#include <stdint.h>
+#include "sdm18.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -137,16 +137,10 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim2);
   zui_init();
 
-  // float t = TMP102_ReadTemperature();
-
-  // LCD_Fill(0,0,LCD_W,LCD_H,WHITE);
-  // LCD_DrawArea(0, 0, LCD_W, LCD_H,WHITE);
-  LCD_Fill(0,0,LCD_W,LCD_H,WHITE);
-  // zui_elm_set_dirty(&batnum_elm_char16);
-  // zui_elm_set_dirty(&bat_elm_char16);
-  // zui_elm_set_dirty(&zui_elm_char12);
   zui_dirty_current_layer();
   zui_render_current_layer();
+
+  start_meter();
   
   HAL_Delay(100);
 	HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_RESET);
@@ -163,31 +157,18 @@ int main(void)
       HAL_GPIO_TogglePin(KEY3_GPIO_Port, KEY3_Pin);
       Z_ADC_DMA_Start(&hadc1);
       TMP102_ReadTemperature();
-      // HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_2);
     }
 
     if ( (tim2_int_mask & TIM_INT10MS_MASK) != 0){
       tim2_int_mask &= (~TIM_INT10MS_MASK);
       key_scan();
-      // DRAW_FRAME(0);
-      // DRAW_DATA(0);
     }
 
     if ( (tim2_int_mask & TIM_INT200MS_MASK) != 0) {
       tim2_int_mask &= (~TIM_INT200MS_MASK);
-			// zui_elm_set_dirty(&pure_element);
       zui_render_current_layer();
-      // DRAW_FRAME(0);
-      // DRAW_DATA(0);
     }
 
-
-    // if (a == 1){
-    //   HAL_GPIO_WritePin(EJCMT_EN_GPIO_Port, EJCMT_EN_Pin, GPIO_PIN_SET);
-    // }
-    // else{
-    //   HAL_GPIO_WritePin(EJCMT_EN_GPIO_Port, EJCMT_EN_Pin, GPIO_PIN_RESET);
-    // }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

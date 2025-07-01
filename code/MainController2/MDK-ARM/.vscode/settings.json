@@ -8,6 +8,7 @@
         "zui.h": "c",
         "lcd_init.h": "c",
         "spi.h": "c",
-        "tmp102.h": "c"
+        "tmp102.h": "c",
+        "usart.h": "c"
     }
 }
