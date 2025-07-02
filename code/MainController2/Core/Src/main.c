@@ -87,6 +87,8 @@ int main(void)
   /* USER CODE BEGIN 1 */
   uint8_t a = 0;
 	uint16_t * b = 0;
+
+  extern UI_Layer normal_layer;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -140,6 +142,11 @@ int main(void)
   zui_dirty_current_layer();
   zui_render_current_layer();
 
+  zui_set_current_layer(&normal_layer);
+  zui_dirty_current_layer();
+  zui_render_current_layer();
+
+  HAL_Delay(100);
   start_meter();
   
   HAL_Delay(100);

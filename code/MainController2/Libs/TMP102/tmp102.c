@@ -1,6 +1,6 @@
 #include "tmp102.h"
 #include <stdint.h>
-
+#include "zui.h"
 
 extern I2C_HandleTypeDef hi2c2;
 
@@ -10,6 +10,8 @@ float TMP102_ReadTemperature(void)
 {
     uint8_t temp_raw[2] = {0};
     uint8_t tmpreg = TMP102_TEMP_REG;
+    extern UI_Element BoardTempVal_elm_char16;
+    extern char Boardtemp_vals[3];
 
     // 向 TMP102 写入要读取的寄存器地址
     if (HAL_I2C_Master_Transmit(&hi2c2, TMP102_ADDR, (uint8_t *)&tmpreg, 1, TMP102_I2C_TIMEOUT_MS) != HAL_OK)
@@ -33,5 +35,9 @@ float TMP102_ReadTemperature(void)
     }
 
     tmp102Temp = temp_combined * 0.0625f; // 每个 LSB 为 0.0625°C
+
+    Boardtemp_vals[0] = ( (uint8_t) tmp102Temp % 100)/10 +'0';
+    Boardtemp_vals[1] = ( (uint8_t) tmp102Temp % 10)/1 +'0';
+    BoardTempVal_elm_char16.dirty = 1;
     return tmp102Temp;
 }

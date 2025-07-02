@@ -228,7 +228,8 @@ void Z_ADC_DMA_Start(ADC_HandleTypeDef *hadc)
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
-  extern UI_Element batnum_elm_char16;
+  extern UI_Element batnum_elm_char16, CoreTempVal_elm_char16;
+  extern char Coretemp_vals[3];
   // char tmp[6];
   float vref = 3.0f * (*VREFINT_CAL_ADDR) / adc_values[2];
   float TEMP30 = (*TEMP30_CAL_ADDR) *3 / vref;
@@ -243,6 +244,10 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
     // float_to_str_1int_2frac(3.996, (char *) bat_volt_char);
     batnum_elm_char16.user_data = (uint8_t *) bat_volt_char;
     batnum_elm_char16.dirty = 1;
+
+    Coretemp_vals[0] = ( (uint8_t) temperature_cd % 100)/10 +'0';
+    Coretemp_vals[1] = ( (uint8_t) temperature_cd % 10)/1 +'0';
+    CoreTempVal_elm_char16.dirty = 1;
   }
 }
 

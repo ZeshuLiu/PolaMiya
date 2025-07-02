@@ -9,10 +9,10 @@ float distance = 0;
 
 void start_meter()
 {
-    HAL_UART_Transmit(&SDM18_USART, stop_meter_cmd, SDM18_CMD_LEN, 0xffff);
+    HAL_UART_Transmit(&SDM18_USART, stop_meter_cmd, SDM18_CMD_LEN, 0xfff);
     // HAL_Delay(100);
 
-		HAL_UART_Receive(&SDM18_USART, sdm18_receive_data, 60, 0xffff);
+		HAL_UART_Receive(&SDM18_USART, sdm18_receive_data, 10, 0xfff);
     HAL_UART_Transmit(&SDM18_USART, start_meter_cmd, SDM18_CMD_LEN, 0xfff);
     HAL_UART_Receive_IT(&SDM18_USART, sdm18_receive_data, SDM18_DATA_LEN);
     // HAL_UART_Receive(&SDM18_USART, sdm18_receive_data, SDM18_DATA_LEN,0xffffff);

@@ -27,6 +27,16 @@
 #define DISTANCE_NUM_X 30 + 37
 #define DISTANCE_NUM_Y DISTANCE_TITLE_Y
 
+#define CORETEMP_TITLE_X 30
+#define CORETEMP_TITLE_Y 90
+#define CORETEMP_NUM_X 30 + 82
+#define CORETEMP_NUM_Y CORETEMP_TITLE_Y
+
+#define BOARDTEMP_TITLE_X 30
+#define BOARDTEMP_TITLE_Y 110
+#define BOARDTEMP_NUM_X 30 + 91
+#define BOARDTEMP_NUM_Y BOARDTEMP_TITLE_Y
+
 void zui_layer_init(void);
 void zui_elm_init(void);
 #endif

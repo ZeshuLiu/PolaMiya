@@ -11,8 +11,8 @@ void zui_pure_layer_on_key(USR_KEY * key)
 
 void pure_elm_render(struct UI_Element *el, uint16_t *buf)
 {
-	static uint16_t clr=BLACK;
-	clr++;
+	static uint16_t clr=WHITE;
+	// clr++;
     zui_fill_screen_color(clr, buf);
 }
 
@@ -32,6 +32,8 @@ void pure_layer_elm_init(void)
 /* Noraml Layer*/
 char keyval_vals[4] = "x-x";
 char distanceval_vals[6] = "xx.xx";
+char Coretemp_vals[3] = "xx";
+char Boardtemp_vals[3] = "xx";
 UI_Layer normal_layer;
 UI_Element bat_elm_char16;
 UI_Element batnum_elm_char16;
@@ -39,6 +41,10 @@ UI_Element key_elm_char16;
 UI_Element keyval_elm_char16;
 UI_Element distance_elm_char16;
 UI_Element distanceval_elm_char16;
+UI_Element CoreTemp_elm_char16;
+UI_Element CoreTempVal_elm_char16;
+UI_Element BoardTemp_elm_char16;
+UI_Element BoardTempVal_elm_char16;
 UI_Element zui_elm_char12;
 
 void zui_normal_layer_on_key(USR_KEY * key)
@@ -132,6 +138,50 @@ void normal_layer_elm_init(void)
     distanceval_elm_char16.user_data = (uint8_t *) distanceval_vals;
     zui_layer_add_element(&normal_layer, &distanceval_elm_char16);
 
+    CoreTemp_elm_char16.x = CORETEMP_TITLE_X;
+    CoreTemp_elm_char16.y = CORETEMP_TITLE_Y;
+    CoreTemp_elm_char16.w = 50;
+    CoreTemp_elm_char16.h = 20;
+    CoreTemp_elm_char16.render = char_16_elm_render;
+    CoreTemp_elm_char16.dirty = 0;
+    CoreTemp_elm_char16.next = NULL;
+    CoreTemp_elm_char16.usr_data_len = 10;
+    CoreTemp_elm_char16.user_data = (uint8_t *) "CoreTemp:";
+    zui_layer_add_element(&normal_layer, &CoreTemp_elm_char16);
+
+    CoreTempVal_elm_char16.x = CORETEMP_NUM_X;
+    CoreTempVal_elm_char16.y = CORETEMP_NUM_Y;
+    CoreTempVal_elm_char16.w = 50;
+    CoreTempVal_elm_char16.h = 20;
+    CoreTempVal_elm_char16.render = char_16_elm_render;
+    CoreTempVal_elm_char16.dirty = 0;
+    CoreTempVal_elm_char16.next = NULL;
+    CoreTempVal_elm_char16.usr_data_len = 3;
+    CoreTempVal_elm_char16.user_data = (uint8_t *) Coretemp_vals;
+    zui_layer_add_element(&normal_layer, &CoreTempVal_elm_char16);
+
+    BoardTemp_elm_char16.x = BOARDTEMP_TITLE_X;
+    BoardTemp_elm_char16.y = BOARDTEMP_TITLE_Y;
+    BoardTemp_elm_char16.w = 50;
+    BoardTemp_elm_char16.h = 20;
+    BoardTemp_elm_char16.render = char_16_elm_render;
+    BoardTemp_elm_char16.dirty = 0;
+    BoardTemp_elm_char16.next = NULL;
+    BoardTemp_elm_char16.usr_data_len = 11;
+    BoardTemp_elm_char16.user_data = (uint8_t *) "BoardTemp:";
+    zui_layer_add_element(&normal_layer, &BoardTemp_elm_char16);
+
+    BoardTempVal_elm_char16.x = BOARDTEMP_NUM_X;
+    BoardTempVal_elm_char16.y = BOARDTEMP_NUM_Y;
+    BoardTempVal_elm_char16.w = 50;
+    BoardTempVal_elm_char16.h = 20;
+    BoardTempVal_elm_char16.render = char_16_elm_render;
+    BoardTempVal_elm_char16.dirty = 0;
+    BoardTempVal_elm_char16.next = NULL;
+    BoardTempVal_elm_char16.usr_data_len = 3;
+    BoardTempVal_elm_char16.user_data = (uint8_t *) Boardtemp_vals;
+    zui_layer_add_element(&normal_layer, &BoardTempVal_elm_char16);
+
     zui_elm_char12.x = 20;
     zui_elm_char12.y = 220;
     zui_elm_char12.w = 50;
@@ -155,7 +205,7 @@ void zui_layer_init(void)
 
     normal_layer.head = NULL;
     normal_layer.on_key = zui_normal_layer_on_key;
-    zui_set_current_layer(&normal_layer);
+    // zui_set_current_layer(&normal_layer);
 }
 
 
