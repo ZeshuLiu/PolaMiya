@@ -89,6 +89,7 @@ int main(void)
 	uint16_t * b = 0;
 
   extern UI_Layer normal_layer;
+  extern uint8_t motor_state;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -147,7 +148,8 @@ int main(void)
   zui_render_current_layer();
 
   HAL_Delay(100);
-  start_meter();
+  // sdm18_start_meter();
+  sdm18_single_meter();
   
   HAL_Delay(100);
 	HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_RESET);
@@ -175,6 +177,12 @@ int main(void)
       tim2_int_mask &= (~TIM_INT200MS_MASK);
       zui_render_current_layer();
     }
+
+    if ( (tim2_int_mask & TIM_INT300MS_MASK) != 0) {
+      tim2_int_mask &= (~TIM_INT300MS_MASK);
+      if (motor_state == 0) sdm18_single_meter();
+    }
+
 
     /* USER CODE END WHILE */
 

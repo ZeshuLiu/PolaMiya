@@ -47,6 +47,8 @@ extern "C" {
 #define TIM_INT200MS_MASK      (0x04)
 #define TIM_INTCNT_1S         (100)               // 1s中断
 #define TIM_INT1S_MASK        0x01
+#define TIM_INTCNT_300MS         (30)               // 300ms中断
+#define TIM_INT300MS_MASK        (0x08)
 
 #define TIM_INTCNT_MAX TIM_INTCNT_1S                // 1s
 

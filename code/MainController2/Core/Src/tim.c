@@ -189,6 +189,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         tim2_int_mask |= TIM_INT200MS_MASK;
       }
 
+      if (int2_cnt % TIM_INTCNT_300MS == 0){
+        tim2_int_mask |= TIM_INT300MS_MASK;
+      }
+
       if (int2_cnt == TIM_INTCNT_MAX){
         int2_cnt = 1;
       }

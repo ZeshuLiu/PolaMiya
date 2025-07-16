@@ -5,7 +5,9 @@
 #define SDM18_DATA_LEN      23
 #define SDM18_USART         huart2
 
-void start_meter();
+void sdm18_start_meter();
+void sdm18_stop_meter();
+void sdm18_single_meter();
 void parse_meter(void);
 
 #endif
