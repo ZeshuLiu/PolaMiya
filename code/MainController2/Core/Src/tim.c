@@ -181,7 +181,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       int2_cnt++;
       tim2_int_mask |= TIM_INT10MS_MASK;
 
-      if (int2_cnt == TIM_INTCNT_1S){
+      if (int2_cnt % TIM_INTCNT_1S == 0){
         tim2_int_mask |= TIM_INT1S_MASK;
       }
 
