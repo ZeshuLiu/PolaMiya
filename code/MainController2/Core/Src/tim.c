@@ -175,7 +175,7 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   extern uint8_t tim2_int_mask;
-  static uint16_t int2_cnt = 1;
+  static uint32_t int2_cnt = 1;
 
   if (htim == (&htim2)){
       int2_cnt++;
@@ -193,9 +193,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         tim2_int_mask |= TIM_INT300MS_MASK;
       }
 
-      if (int2_cnt == TIM_INTCNT_MAX){
-        int2_cnt = 1;
-      }
+      // if (int2_cnt == TIM_INTCNT_MAX){
+      //   int2_cnt = 1;
+      // }
   }
 }
 /* USER CODE END 1 */
