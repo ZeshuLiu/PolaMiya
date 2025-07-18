@@ -23,6 +23,7 @@
 
 /* USER CODE BEGIN 0 */
 #include "motor.h"
+#include "DataStore.h"
 /* USER CODE END 0 */
 
 /*----------------------------------------------------------------------------*/
@@ -78,8 +79,8 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : SHUT_Trig_Pin */
   GPIO_InitStruct.Pin = SHUT_Trig_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(SHUT_Trig_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : EJCMT_EN_Pin KEY3_Pin FLASH_Trig_Pin */
@@ -128,6 +129,9 @@ void MX_GPIO_Init(void)
   HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI4_IRQn);
 
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+
   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
@@ -137,12 +141,23 @@ void MX_GPIO_Init(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   extern uint8_t motor_start_cnt;
+  uint32_t tmp;
+  static uint32_t SHUT_Tick = 0;
   if (GPIO_Pin == KEY0_Pin)
   {
     if (motor_start_cnt++)
     {
       motor_end();
       HAL_NVIC_DisableIRQ(EXTI0_IRQn);
+    }
+  }
+
+  if (GPIO_Pin == SHUT_Trig_Pin)
+  {
+    if (HAL_GetTick() - SHUT_Tick > 1000){
+      tmp = data_acq_stc() + 1;
+      data_set_stc(1);
+      SHUT_Tick = HAL_GetTick();
     }
   }
 }

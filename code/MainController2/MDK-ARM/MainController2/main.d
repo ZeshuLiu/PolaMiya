@@ -44,4 +44,5 @@ maincontroller2/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\HARDWARE\LCD\lcd_usr.h ..\HARDWARE\LCD\lcd_init.h \
   ..\HARDWARE\LCD\lcd.h ..\HARDWARE\LCD\lcdfont.h ..\HARDWARE\LCD\pic.h \
   ..\Libs\ZUI\zui.h ..\Libs\ZUI\zui_usr.h ..\Libs\TMP102\tmp102.h \
-  ..\Libs\SDM18\sdm18.h
+  ..\Libs\SDM18\sdm18.h ..\Libs\EEPROM\eeprom.h \
+  ..\Libs\EEPROM\DataStore.h

@@ -29,13 +29,28 @@
 
 #define CORETEMP_TITLE_X 30
 #define CORETEMP_TITLE_Y 90
-#define CORETEMP_NUM_X 30 + 82
+#define CORETEMP_NUM_X 30 + 37
 #define CORETEMP_NUM_Y CORETEMP_TITLE_Y
 
 #define BOARDTEMP_TITLE_X 30
 #define BOARDTEMP_TITLE_Y 110
-#define BOARDTEMP_NUM_X 30 + 91
+#define BOARDTEMP_NUM_X 30 + 37
 #define BOARDTEMP_NUM_Y BOARDTEMP_TITLE_Y
+
+#define RBC_TITLE_X 30
+#define RBC_TITLE_Y 130
+#define RBC_NUM_X 30 + 37
+#define RBC_NUM_Y RBC_TITLE_Y
+
+#define MTL_TITLE_X 30
+#define MTL_TITLE_Y 150
+#define MTL_NUM_X 30 + 37
+#define MTL_NUM_Y MTL_TITLE_Y
+
+#define STC_TITLE_X 30
+#define STC_TITLE_Y 170
+#define STC_NUM_X 30 + 37
+#define STC_NUM_Y STC_TITLE_Y
 
 void zui_layer_init(void);
 void zui_elm_init(void);

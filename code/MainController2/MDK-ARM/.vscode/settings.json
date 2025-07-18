@@ -9,6 +9,8 @@
         "lcd_init.h": "c",
         "spi.h": "c",
         "tmp102.h": "c",
-        "usart.h": "c"
+        "usart.h": "c",
+        "eeprom.h": "c",
+        "datastore.h": "c"
     }
 }

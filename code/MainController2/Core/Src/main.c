@@ -35,6 +35,8 @@
 #include "zui_usr.h"
 #include "tmp102.h"
 #include "sdm18.h"
+#include "eeprom.h"
+#include "DataStore.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,6 +65,8 @@ extern double BAT_V, temperature_cd;
 extern UI_Element zui_elm_char12;
 extern UI_Element bat_elm_char16;
 extern UI_Element batnum_elm_char16;
+GPIO_PinState test_pin;
+uint8_t tmp = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -130,6 +134,9 @@ int main(void)
   HAL_Delay(100);
   HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_SET);
 
+  init_data_eeprom();
+  data_update_rbc();
+
   // 按键初始化
   key_init();
 
@@ -150,7 +157,7 @@ int main(void)
   HAL_Delay(100);
   // sdm18_start_meter();
   sdm18_single_meter();
-  
+
   HAL_Delay(100);
 	HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_RESET);
 	
@@ -171,6 +178,10 @@ int main(void)
     if ( (tim2_int_mask & TIM_INT10MS_MASK) != 0){
       tim2_int_mask &= (~TIM_INT10MS_MASK);
       key_scan();
+      test_pin = HAL_GPIO_ReadPin(SHUT_Trig_GPIO_Port, SHUT_Trig_Pin);
+      if (test_pin == GPIO_PIN_SET){
+        tmp+=1;
+      }
     }
 
     if ( (tim2_int_mask & TIM_INT200MS_MASK) != 0) {

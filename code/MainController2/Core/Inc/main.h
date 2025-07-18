@@ -82,6 +82,7 @@ void Error_Handler(void);
 #define KEY2_EXTI_IRQn EXTI4_IRQn
 #define SHUT_Trig_Pin GPIO_PIN_5
 #define SHUT_Trig_GPIO_Port GPIOA
+#define SHUT_Trig_EXTI_IRQn EXTI9_5_IRQn
 #define EJCMT_EN_Pin GPIO_PIN_6
 #define EJCMT_EN_GPIO_Port GPIOA
 #define KEY3_Pin GPIO_PIN_7

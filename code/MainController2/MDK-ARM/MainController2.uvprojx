@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32G431xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32G4xx_HAL_Driver/Inc;../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32G4xx/Include;../Drivers/CMSIS/Include;../USB_Device/App;../USB_Device/Target;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../HARDWARE/LCD;../Libs/gui_usr;../Libs/ZUI;../Libs/TMP102;../Libs/Motors;../Libs/SDM18</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32G4xx_HAL_Driver/Inc;../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32G4xx/Include;../Drivers/CMSIS/Include;../USB_Device/App;../USB_Device/Target;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../HARDWARE/LCD;../Libs/gui_usr;../Libs/ZUI;../Libs/TMP102;../Libs/Motors;../Libs/SDM18;../Libs/EEPROM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1509,6 +1509,21 @@
               <FileName>sdm18.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Libs\SDM18\sdm18.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>EEPROM</GroupName>
+          <Files>
+            <File>
+              <FileName>eeprom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Libs\EEPROM\eeprom.c</FilePath>
+            </File>
+            <File>
+              <FileName>DataStore.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Libs\EEPROM\DataStore.c</FilePath>
             </File>
           </Files>
         </Group>
