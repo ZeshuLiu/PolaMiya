@@ -12,7 +12,7 @@
 #define EEP_RBC_LEN  4
 #define EEP_STC_OFFSET  5   // 6 7 8
 #define EEP_STC_LEN  4
-#define EEP_MTL_OFFSET  9 // 10 11 12 13 14 15 16
+#define EEP_MTL_OFFSET  9 // 10 11 12
 #define EEP_MTL_LEN 4
 
 typedef struct __attribute__((packed)) {

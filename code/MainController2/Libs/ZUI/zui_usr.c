@@ -55,6 +55,7 @@ UI_Element MTLVal_elm_char16;
 UI_Element STC_elm_char16;
 UI_Element STCVal_elm_char16;
 UI_Element zui_elm_char12;
+UI_Element Cal_elm_char12;
 
 void zui_normal_layer_on_key(USR_KEY * key)
 {
@@ -267,6 +268,17 @@ void normal_layer_elm_init(void)
     zui_elm_char12.usr_data_len = 28;
     zui_elm_char12.user_data = (uint8_t *) "Powered By Z-UI (Ver 0.0.1)";
     zui_layer_add_element(&normal_layer, &zui_elm_char12);
+
+    Cal_elm_char12.x = 20;
+    Cal_elm_char12.y = 200;
+    Cal_elm_char12.w = 50;
+    Cal_elm_char12.h = 20;
+    Cal_elm_char12.render = char_12_elm_render;
+    Cal_elm_char12.dirty = 0;
+    Cal_elm_char12.next = NULL;
+    Cal_elm_char12.usr_data_len = 27;
+    Cal_elm_char12.user_data = (uint8_t *) "inf-10m-5m-2.5m-2m-1.5m-1m";
+    zui_layer_add_element(&normal_layer, &Cal_elm_char12);
 
 }
 

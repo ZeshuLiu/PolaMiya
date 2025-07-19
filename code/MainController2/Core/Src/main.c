@@ -135,6 +135,7 @@ int main(void)
   HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_SET);
 
   init_data_eeprom();
+  HAL_Delay(10);
   data_update_rbc();
 
   // 按键初始化

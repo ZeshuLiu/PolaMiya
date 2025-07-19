@@ -17,7 +17,7 @@ HAL_StatusTypeDef AT24C08C_Write2KB(I2C_HandleTypeDef *hi2c, uint16_t addr, uint
         uint8_t chunk_len = (len - offset > page_left) ? page_left : (len - offset);
 
         ret = HAL_I2C_Mem_Write(hi2c, dev_addr << 1, mem_byte, I2C_MEMADD_SIZE_8BIT,
-                                &data[offset], chunk_len, 100);
+                                &data[offset], chunk_len, 2000);
         if (ret != HAL_OK) return ret;
 
         // HAL_Delay(5);  // 写入完成时间（典型为 5ms）
@@ -43,7 +43,7 @@ HAL_StatusTypeDef AT24C08C_Read2KB(I2C_HandleTypeDef *hi2c, uint16_t addr, uint8
         uint8_t page_left = 16 - (curr_addr % 16);
         uint8_t chunk_len = (len - offset > page_left) ? page_left : (len - offset);
 
-        ret = HAL_I2C_Mem_Read(hi2c, dev_addr << 1, mem_byte, I2C_MEMADD_SIZE_8BIT, &data[offset], chunk_len, 100);
+        ret = HAL_I2C_Mem_Read(hi2c, dev_addr << 1, mem_byte, I2C_MEMADD_SIZE_8BIT, &data[offset], chunk_len, 2000);
         if (ret != HAL_OK) return ret;
 
         offset += chunk_len;

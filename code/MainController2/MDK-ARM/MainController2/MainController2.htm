@@ -3,7 +3,7 @@
 <title>Static Call Graph - [MainController2\MainController2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image MainController2\MainController2.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Fri Jul 18 13:07:44 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Sat Jul 19 13:50:57 2025
 <BR><P>
 <H3>Maximum Stack Usage =        644 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -593,7 +593,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
 </UL>
 
-<P><STRONG><a name="[99]"></a>AT24C08C_Read2KB</STRONG> (Thumb, 260 bytes, Stack size 56 bytes, eeprom.o(.text.AT24C08C_Read2KB))
+<P><STRONG><a name="[99]"></a>AT24C08C_Read2KB</STRONG> (Thumb, 262 bytes, Stack size 56 bytes, eeprom.o(.text.AT24C08C_Read2KB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 212<LI>Call Chain = AT24C08C_Read2KB &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnFlagUntilTimeout &rArr; I2C_IsErrorOccurred &rArr; I2C_Flush_TXDR
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
@@ -601,7 +601,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_data_eeprom
 </UL>
 
-<P><STRONG><a name="[9b]"></a>AT24C08C_Write2KB</STRONG> (Thumb, 260 bytes, Stack size 56 bytes, eeprom.o(.text.AT24C08C_Write2KB))
+<P><STRONG><a name="[9b]"></a>AT24C08C_Write2KB</STRONG> (Thumb, 262 bytes, Stack size 56 bytes, eeprom.o(.text.AT24C08C_Write2KB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 212<LI>Call Chain = AT24C08C_Write2KB &rArr; HAL_I2C_Mem_Write &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnFlagUntilTimeout &rArr; I2C_IsErrorOccurred &rArr; I2C_Flush_TXDR
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Write
@@ -2968,7 +2968,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[80]"></a>main</STRONG> (Thumb, 456 bytes, Stack size 40 bytes, main.o(.text.main))
+<P><STRONG><a name="[80]"></a>main</STRONG> (Thumb, 462 bytes, Stack size 40 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 416 + Unknown Stack Size
 <LI>Call Chain = main &rArr; zui_init &rArr; LCD_Init &rArr; LCD_WR_REG &rArr; LCD_Writ_Bus &rArr; HAL_SPI_Transmit &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
@@ -3029,8 +3029,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zui_normal_layer_on_key
 </UL>
 
-<P><STRONG><a name="[1d1]"></a>normal_layer_elm_init</STRONG> (Thumb, 1004 bytes, Stack size 56 bytes, zui_usr.o(.text.normal_layer_elm_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = normal_layer_elm_init &rArr; zui_layer_add_element
+<P><STRONG><a name="[1d1]"></a>normal_layer_elm_init</STRONG> (Thumb, 1068 bytes, Stack size 64 bytes, zui_usr.o(.text.normal_layer_elm_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = normal_layer_elm_init &rArr; zui_layer_add_element
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;zui_layer_add_element
 </UL>
@@ -3091,7 +3091,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1d5]"></a>zui_elm_init</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, zui_usr.o(.text.zui_elm_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = zui_elm_init &rArr; normal_layer_elm_init &rArr; zui_layer_add_element
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = zui_elm_init &rArr; normal_layer_elm_init &rArr; zui_layer_add_element
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;normal_layer_elm_init
 <LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pure_layer_elm_init
