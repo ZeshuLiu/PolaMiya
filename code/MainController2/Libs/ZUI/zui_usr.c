@@ -276,8 +276,8 @@ void normal_layer_elm_init(void)
     Cal_elm_char12.render = char_12_elm_render;
     Cal_elm_char12.dirty = 0;
     Cal_elm_char12.next = NULL;
-    Cal_elm_char12.usr_data_len = 27;
-    Cal_elm_char12.user_data = (uint8_t *) "inf-10m-5m-2.5m-2m-1.5m-1m";
+    Cal_elm_char12.usr_data_len = 31;
+    Cal_elm_char12.user_data = (uint8_t *) "inf-7m-4m-2.5m-2m-1.5m-1.2m-1m";
     zui_layer_add_element(&normal_layer, &Cal_elm_char12);
 
 }

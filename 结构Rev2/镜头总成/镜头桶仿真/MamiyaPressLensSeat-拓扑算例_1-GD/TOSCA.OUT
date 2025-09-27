@@ -1,0 +1,167 @@
+(NOTICE  ) [21:45:09.545702|tosca_python] ------------------------------------------------------
+(NOTICE  ) [21:45:09.545702|tosca_python] |                                                    |
+(NOTICE  ) [21:45:09.545702|tosca_python] |           Tosca Structure Python Control           |
+(NOTICE  ) [21:45:09.545702|tosca_python] |                                                    |
+(NOTICE  ) [21:45:09.545702|tosca_python] ------------------------------------------------------
+(NOTICE  ) [21:45:09.545702|tosca_python] 
+(NOTICE  ) [21:45:09.545702|tosca_python] Tosca started at Sun, 24 Nov 2024 21:45:09
+(NOTICE  ) [21:45:09.545702|tosca_python] 
+(INFO    ) [21:45:09.643698|tosca_python] --------------------------
+(INFO    ) [21:45:09.643698|tosca_python] Loading User Configuration
+(INFO    ) [21:45:09.643698|tosca_python] --------------------------
+(INFO    ) [21:45:09.643698|tosca_python] Executing: E:\Software\Solidworks2023\Solidworks\SOLIDWORKS\Simulation\Topology\SMATsoResources\config\tosca.cfg
+(INFO    ) [21:45:09.686619|tosca_python] Executing: F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例_1-GD.par
+(INFO    ) [21:45:09.692125|tosca_python] Log level               : INFO
+(INFO    ) [21:45:09.692125|tosca_python] Job name                : MamiyaPressLensSeat-拓扑算例_1-GD
+(INFO    ) [21:45:09.692125|tosca_python] Input directory         : F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真
+(INFO    ) [21:45:09.692125|tosca_python] Parameter file          : F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例_1-GD.par
+(INFO    ) [21:45:09.692125|tosca_python] Working directory       : F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例_1-GD
+(INFO    ) [21:45:09.692125|tosca_python] Startup directory       : F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真
+(INFO    ) [21:45:09.692125|tosca_python] Platform                : win_b64
+(INFO    ) [21:45:09.692125|tosca_python] Optimization type       : Topo Sensitivity
+(INFO    ) [21:45:09.692125|tosca_python] Macros directory        : E:\Software\Solidworks2023\Solidworks\SOLIDWORKS\Simulation\Topology\SMATsoResources\macros
+(INFO    ) [21:45:09.692125|tosca_python] Test type               : ALL
+(INFO    ) [21:45:09.692125|tosca_python] Fe-Solver               : cosmos
+(INFO    ) [21:45:09.692125|tosca_python] -----------
+(INFO    ) [21:45:09.692125|tosca_python] Input Files
+(INFO    ) [21:45:09.692125|tosca_python] -----------
+(INFO    ) [21:45:09.692125|tosca_python] Main input deck         : F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.NOD
+(INFO    ) [21:45:09.692125|tosca_python] ---------------
+(INFO    ) [21:45:09.692125|tosca_python] Post-Processing
+(INFO    ) [21:45:09.692125|tosca_python] ---------------
+(INFO    ) [21:45:09.692125|tosca_python] * Smooth
+(INFO    ) [21:45:09.692125|tosca_python] 
+(NOTICE  ) [21:45:09.693136|tosca_python] Starting job MamiyaPressLensSeat-拓扑算例_1-GD
+(INFO    ) [21:45:09.693136|tosca_python] ---------------------------
+(NOTICE  ) [21:45:09.693136|tosca_python] Checking User Configuration
+(INFO    ) [21:45:09.693136|tosca_python] ---------------------------
+(INFO    ) [21:45:09.693136|tosca_python] ------------------------------
+(INFO    ) [21:45:09.693136|tosca_python] Calling: E:\Software\Solidworks2023\Solidworks\SOLIDWORKS\Simulation\Topology\code\bin\SMATsoFemInclude.exe --loglevel INFO --solver cosmos --out F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例_1-GD\_included_files.json F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.NOD
+(INFO    ) [21:45:09.829664|SMATsoFemInclude|14060|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoFemInclude - version 3DEXPERIENCE R2022x - build R424 - 20220412T180016Z 64 bit
+(INFO    ) [21:45:09.834159|SMATsoFemInclude|14060|SMATsoFemIncludeMain|main] SIMULIA Tosca Structure.SMATsoFemInclude finished successfully
+(INFO    ) [21:45:09.842684|tosca_python] Module SMATsoFemInclude has finished with exit code 0
+(INFO    ) [21:45:09.842684|tosca_python] Elapsed time of SMATsoFemInclude : 0:00:00.149548  -  current time: 2024-11-24 21:45:09.842684
+(INFO    ) [21:45:09.847194|tosca_python] Included files:
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.NOD
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.MAS
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.LOD
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.ELE
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.EGR
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.ILC
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.DSP
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.GEN
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.CSY
+(INFO    ) [21:45:09.847194|tosca_python]   F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例 1.MAT
+(INFO    ) [21:45:10.600035|tosca_python] ----------------------------
+(INFO    ) [21:45:10.600035|tosca_python] Creating archive directories
+(INFO    ) [21:45:10.600035|tosca_python] ----------------------------
+(INFO    ) [21:45:10.602036|tosca_python] Directory created: F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例_1-GD\TOSCA_POST
+(INFO    ) [21:45:11.338345|tosca_python] Calling: E:\Software\Solidworks2023\Solidworks\SOLIDWORKS\Simulation\Topology\code\bin\SMATsoFemToOnf.exe --loglevel INFO --solver cosmos F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例_1-GD\MamiyaPressLensSeat-拓扑算例 1.NOD
+(INFO    ) [21:45:11.483441|SMATsoFem2Onf|13484|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoFem2Onf - version 3DEXPERIENCE R2022x - build R424 - 20220412T180016Z 64 bit
+(INFO    ) [21:45:11.486443|SMATsoFem2Onf|13484|SMATsoFemToOnfMain|main] Translating the Cosmos input file F:\Develope\PolaTax\\xb9\xb9\xbd\xa8\AF5000Ver\\xbe\xb5ͷ\xd7ܳ\xc9\\xbe\xb5ͷͰ\xb7\xc2\xd5\xe6\MamiyaPressLensSeat-\xcd\xd8\xc6\xcb\xcb\xe3\xc0\xfd_1-GD\MamiyaPressLensSeat-\xcd\xd8\xc6\xcb\xcb\xe3\xc0\xfd 1.NOD to the optimization neutral format
+(INFO    ) [21:45:12.055862|SMATsoFem2Onf|13484|SMATocOnfEngine|OnfGroupsFile] Writing ONF group file F:\Develope\PolaTax\\xb9\xb9\xbd\xa8\AF5000Ver\\xbe\xb5ͷ\xd7ܳ\xc9\\xbe\xb5ͷͰ\xb7\xc2\xd5\xe6\MamiyaPressLensSeat-\xcd\xd8\xc6\xcb\xcb\xe3\xc0\xfd_1-GD\MamiyaPressLensSeat-\xcd\xd8\xc6\xcb\xcb\xe3\xc0\xfd 1_grp.onf
+(INFO    ) [21:45:12.131952|SMATsoFem2Onf|13484|SMATocOnfEngine|OnfModelFile] Writing ONF input file F:\Develope\PolaTax\\xb9\xb9\xbd\xa8\AF5000Ver\\xbe\xb5ͷ\xd7ܳ\xc9\\xbe\xb5ͷͰ\xb7\xc2\xd5\xe6\MamiyaPressLensSeat-\xcd\xd8\xc6\xcb\xcb\xe3\xc0\xfd_1-GD\MamiyaPressLensSeat-\xcd\xd8\xc6\xcb\xcb\xe3\xc0\xfd 1_fem.onf
+(INFO    ) [21:45:12.671071|SMATsoFem2Onf|13484|SMATsoFemToOnfMain|main] SIMULIA Tosca Structure.SMATsoFem2Onf finished successfully
+(INFO    ) [21:45:12.680071|tosca_python] Module SMATsoFemToOnf has finished with exit code 0
+(INFO    ) [21:45:12.681071|tosca_python] Elapsed time of SMATsoFemToOnf : 0:00:01.341726  -  current time: 2024-11-24 21:45:12.680071
+(NOTICE  ) [21:45:12.681071|tosca_python] Starting SIMULIA Tosca Structure Preprocessor
+(INFO    ) [21:45:12.682576|tosca_python] Setting up the VTM cache size to 1163 MB
+(INFO    ) [21:45:12.682576|tosca_python] Setting up TOSCA_SIZE to 150000
+(INFO    ) [21:45:12.682576|tosca_python] Calling: E:\Software\Solidworks2023\Solidworks\SOLIDWORKS\Simulation\Topology\code\bin\SMATsoToscaPrep.exe --loglevel INFO --input F:\Develope\PolaTax\构建\AF5000Ver\镜头总成\镜头桶仿真\MamiyaPressLensSeat-拓扑算例_1-GD.par
+(INFO    ) [21:45:12.837009|SMATsoToscaPrep|19840|SMATocApplication|FED_Application] SIMULIA Tosca Structure.SMATsoToscaPrep - version 3DEXPERIENCE R2022x - build R424 - 20220412T180016Z 64 bit
+(INFO    ) [21:45:12.864046|SMATsoToscaPrep|19840|SMATocVtmEngine|SMATocVtmDatabase] Initializing database 'optimization_database' [truncate] ; vtm_cache_size = 2048 MB
+(INFO    ) [21:45:12.865047|SMATsoToscaPrep|19840|SMATocVtmEngine|SMATocVtmDatabase] Initializing database 'opt_res_database' [read/write] ; vtm_cache_size = 2048 MB
+(INFO    ) [21:45:12.865047|SMATsoToscaPrep|19840|SMATocVtmEngine|SMATocVtmDatabase] Initializing database 'fe_mtx_database' [truncate] ; vtm_cache_size = 2048 MB
+(INFO    ) [21:45:12.865047|SMATsoToscaPrep|19840|SMATocVtmEngine|SMATocVtmDatabase] Initializing database 'resume_database' [read/write] ; vtm_cache_size = 2048 MB
+(INFO    ) [21:45:12.893579|SMATsoToscaPrep] Initializing license interface
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |               ___ ___ __  __ _   _ _    ___   _                          |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |              / __|_ _|  \/  | | | | |  |_ _| /_\                         |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |              \__ \| || |\/| | |_| | |__ | | / _ \                        |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |              |___/___|_|  |_|\___/|____|___/_/ \_\                       |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                                                                          |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                    _______                                               |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                   |__   __|                                              |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                      | | ___  ___  ___ __ _                              |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                      | |/ _ \/ __|/ __/ _` |                             |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                      | | (_) \__ \ (_| (_| |                             |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                      |_|\___/|___/\___\__,_|                             |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                                                                          |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |           _____ _                   _                                    |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |          / ____| |                 | |                                   |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |         | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ ___                   |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |          \___ \| __| '__| | | |/ __| __| | | | '__/ _ \                  |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |          ____) | |_| |  | |_| | (__| |_| |_| | | |  __/                  |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |         |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  \___|                  |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                        OPTIMIZATION PREPROCESSOR                         |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |                        of SIMULIA Tosca Structure                        |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] |       Copyright(c) 2020 Dassault Systemes SIMULIA Corp.                  |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] | Version 3DEXPERIENCE R2021x                                              |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] | DATE:   11/24/2024                                                       |
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep]  --------------------------------------------------------------------------
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] Reading command          : DRIVER
+(INFO    ) [21:45:12.902086|SMATsoToscaPrep] Reading command          : FEM_INPUT
+(INFO    ) [21:45:14.499635|SMATsoToscaPrep] Reading command          : *SET_DB
+(INFO    ) [21:45:14.499635|SMATsoToscaPrep] Reading command          : GROUP_DEF
+(INFO    ) [21:45:14.552654|SMATsoToscaPrep] Reading command          : GROUP_DEF
+(INFO    ) [21:45:14.607304|SMATsoToscaPrep] Reading command          : DRESP
+(INFO    ) [21:45:14.607304|SMATsoToscaPrep] Reading command          : DRESP
+(INFO    ) [21:45:14.607304|SMATsoToscaPrep] Reading command          : DV_TOPO
+(INFO    ) [21:45:14.608304|SMATsoToscaPrep] Reading command          : OBJ_FUNC
+(INFO    ) [21:45:14.608304|SMATsoToscaPrep] Reading command          : CONSTRAINT
+(INFO    ) [21:45:14.608304|SMATsoToscaPrep] Reading command          : DVCON_TOPO
+(INFO    ) [21:45:14.610304|SMATsoToscaPrep] Reading command          : DVCON_TOPO
+(INFO    ) [21:45:14.614170|SMATsoToscaPrep] Reading command          : OPTIMIZE
+(INFO    ) [21:45:14.614170|SMATsoToscaPrep] Reading command          : OPT_PARAM
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] Reading command          : STOP
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] | ELEMENTS with CONNECTORS or CONTACTS are AUTOFROZEN                      |
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] System detected the following ELEMENTS as
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] loaded by pressure, boundary conditions or the.
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] connected nodes are loaded by forces, displacements
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] or with concentrated loads.
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] Number of elements:            0
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] 
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] The following LIST of elements can be used
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] for the topology optimization.
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] Number of elements:        38778
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep]      1     ->  38778
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] --------------------------------------------------------------------------
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] 
+(INFO    ) [21:45:14.615170|SMATsoToscaPrep] 
+(ERROR   ) [21:45:14.615170|SMATsoToscaPrep] **** SIMULIA Tosca Structure ERROR ****
+(ERROR   ) [21:45:14.615170|SMATsoToscaPrep] Element group used for TOPOLOGY OPTIMIZATION is empty!
+(ERROR   ) [21:45:14.615170|SMATsoToscaPrep] 
+(ERROR   ) [21:45:14.615170|SMATsoToscaPrep] Please check definition of group or
+(ERROR   ) [21:45:14.615170|SMATsoToscaPrep] check previous output for warnings and errors
+(ERROR   ) [21:45:14.615170|SMATsoToscaPrep] 
+(ERROR   ) [21:45:14.615170|SMATsoToscaPrep] Command will be ignored!
+(ERROR   ) [21:45:14.615170|SMATsoToscaPrep] 
+(CRITICAL) [21:45:14.636192|SMATsoToscaPrep] Failed to determine the design elements for topology optimization
+(CRITICAL) [21:45:14.636192|SMATsoToscaPrep] Please report the conditions under which the ERROR occurred to your local representative
+(CRITICAL) [21:45:14.636192|SMATsoToscaPrep] (Please send the PARAMETER-FILE, the FE-INPUT FILE and a description  of the error to the
+(CRITICAL) [21:45:14.636192|SMATsoToscaPrep] hotline)
+(CRITICAL) [21:45:14.636192|SMATsoToscaPrep] 111
+(INFO    ) [21:45:14.690346|tosca_python] Module SMATsoToscaPrep has finished with exit code 111
+(INFO    ) [21:45:14.690346|tosca_python] Elapsed time of SMATsoToscaPrep : 0:00:02.007770  -  current time: 2024-11-24 21:45:14.690346
+(ERROR   ) [21:45:14.690346|tosca_python] Module SMATsoToscaPrep failed
+(INFO    ) [21:45:14.690346|tosca_python] Moving all files and directories to DB_ERROR
+(INFO    ) [21:45:14.725203|tosca_python] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [21:45:14.725203|tosca_python] Time consumption overview table
+(INFO    ) [21:45:14.725203|tosca_python] --------------------------------------------------------------------------------------------------------------
+(INFO    ) [21:45:14.725203|tosca_python] Cumulative elapsed time for module           SMATsoToscaPrep: 0:00:02.007770 - 39.900% (1 calls)
+(INFO    ) [21:45:14.725203|tosca_python] Cumulative elapsed time for module            SMATsoFemToOnf: 0:00:01.341726 - 26.664% (1 calls)
+(INFO    ) [21:45:14.725203|tosca_python] Cumulative elapsed time for module          SMATsoFemInclude: 0:00:00.149548 - 2.972% (1 calls)
+(INFO    ) [21:45:14.725203|tosca_python] Total elapsed time for this script                          : 0:00:01.533023 - 30.465%
+(INFO    ) [21:45:14.725203|tosca_python] Total elapsed time of SIMULIA Tosca Structure               : 0:00:05.032067 - Current time 21:45:14.725203
+(INFO    ) [21:45:14.725203|tosca_python] --------------------------------------------------------------------------------------------------------------
+(ERROR   ) [21:45:14.725203|tosca_python] Tosca Structure failed to run the optimization task
