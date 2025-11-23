@@ -128,6 +128,7 @@ int main(void)
   MX_TIM2_Init();
   MX_USB_Device_Init();
   MX_TIM1_Init();
+  MX_TIM16_Init();
   /* USER CODE BEGIN 2 */
 
   // 开始启动
@@ -193,14 +194,7 @@ int main(void)
           shut_trig_stat = 0;
           HAL_GPIO_WritePin(FLASH_Trig_GPIO_Port, FLASH_Trig_Pin, GPIO_PIN_RESET);
         }
-        
-        
       }
-      
-      // test_pin = HAL_GPIO_ReadPin(SHUT_Trig_GPIO_Port, SHUT_Trig_Pin);
-      // if (test_pin == GPIO_PIN_SET){
-      //   tmp+=1;
-      // }
     }
 
     if ( (tim2_int_mask & TIM_INT200MS_MASK) != 0) {

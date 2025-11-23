@@ -36,4 +36,4 @@ maincontroller2/motor.o: ..\Libs\Motors\motor.c ..\Libs\Motors\motor.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_tim_ex.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_uart_ex.h \
-  ..\Libs\EEPROM\DataStore.h
+  ..\Libs\EEPROM\DataStore.h ..\Core\Inc\tim.h ..\Libs\SDM18\sdm18.h

@@ -5,7 +5,7 @@
 	(uuid "7185bc4a-db7d-484e-8ff2-a58428806037")
 	(paper "A3")
 	(title_block
-		(title "PM Controller")
+		(title "PM Controller （最初投产版本）")
 		(date "2025-06-13")
 		(rev "1.1")
 		(company "LiuZS")
