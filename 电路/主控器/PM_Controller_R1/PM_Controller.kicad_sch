@@ -12076,7 +12076,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 21.59) (xy 102.87 21.59)
+			(xy 102.87 21.59) (xy 120.65 21.59)
 		)
 		(stroke
 			(width 0)
@@ -13636,7 +13636,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 19.05) (xy 115.57 19.05)
+			(xy 102.87 19.05) (xy 120.65 19.05)
 		)
 		(stroke
 			(width 0)
@@ -13996,7 +13996,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 160.02) (xy 233.68 160.02)
+			(xy 251.46 160.02) (xy 233.68 160.02)
 		)
 		(stroke
 			(width 0)
@@ -14376,7 +14376,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 165.1) (xy 240.03 165.1)
+			(xy 233.68 165.1) (xy 251.46 165.1)
 		)
 		(stroke
 			(width 0)
@@ -15165,7 +15165,7 @@
 		(uuid "1317b604-d7c4-4420-b3e2-0cd6efcd77df")
 	)
 	(label "FLASH_Trig"
-		(at 115.57 19.05 180)
+		(at 120.65 19.05 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15333,6 +15333,16 @@
 			(justify right bottom)
 		)
 		(uuid "3652cbfa-4a8b-41d4-9f21-b2fe27a3a354")
+	)
+	(label "FLASH_Trig_Return"
+		(at 251.46 165.1 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3696f396-9f33-4f2a-a921-6de77e14c480")
 	)
 	(label "I2C2_SCL"
 		(at 251.46 77.47 180)
@@ -15735,7 +15745,7 @@
 		(uuid "7ae4fc40-3743-4f92-9b4a-b749e64f0b2e")
 	)
 	(label "FLASH_Trig"
-		(at 245.11 160.02 180)
+		(at 251.46 160.02 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16263,6 +16273,16 @@
 			(justify right bottom)
 		)
 		(uuid "cff3bf9f-4f97-43da-b669-2d96634a6570")
+	)
+	(label "FLASH_Trig_Return"
+		(at 120.65 21.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d01c0302-bf2f-4c7e-9c29-2486f5c61a9b")
 	)
 	(label "LSE-"
 		(at 311.15 219.71 0)
@@ -28530,73 +28550,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 107.95 21.59 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "96eabdf9-99bd-41f7-9356-ed6115ed2265")
-		(property "Reference" "#PWR076"
-			(at 114.3 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 111.76 21.5899 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 107.95 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 107.95 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 107.95 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4b255c08-aae4-45ba-9778-33b467e5b3c5")
-		)
-		(instances
-			(project "PM_Controller"
-				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
-					(reference "#PWR076")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 238.76 123.19 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -29616,72 +29569,6 @@
 			(project "PM_Controller"
 				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
 					(reference "#PWR062")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 240.03 165.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a2010485-e850-48dd-ad59-8d8857a94b7e")
-		(property "Reference" "#PWR078"
-			(at 246.38 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 245.11 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 240.03 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 240.03 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 240.03 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "de8fd31a-b84f-453e-874b-dfc7da2da894")
-		)
-		(instances
-			(project "PM_Controller"
-				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
-					(reference "#PWR078")
 					(unit 1)
 				)
 			)

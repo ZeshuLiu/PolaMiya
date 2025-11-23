@@ -67,6 +67,7 @@ extern UI_Element bat_elm_char16;
 extern UI_Element batnum_elm_char16;
 GPIO_PinState test_pin;
 uint8_t tmp = 0;
+uint8_t shut_trig_stat = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -130,6 +131,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   // 开始启动
+  HAL_GPIO_WritePin(FLASH_Trig_GPIO_Port, FLASH_Trig_Pin, GPIO_PIN_RESET);
+
   HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_RESET);
   HAL_Delay(100);
   HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_SET);
@@ -161,7 +164,7 @@ int main(void)
 
   HAL_Delay(100);
 	HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_RESET);
-	
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -179,10 +182,25 @@ int main(void)
     if ( (tim2_int_mask & TIM_INT10MS_MASK) != 0){
       tim2_int_mask &= (~TIM_INT10MS_MASK);
       key_scan();
-      test_pin = HAL_GPIO_ReadPin(SHUT_Trig_GPIO_Port, SHUT_Trig_Pin);
-      if (test_pin == GPIO_PIN_SET){
-        tmp+=1;
+      if (shut_trig_stat)
+      {
+        if (shut_trig_stat == 1)
+        {
+          shut_trig_stat+=1;
+        }
+        else if (shut_trig_stat == 2)
+        {
+          shut_trig_stat = 0;
+          HAL_GPIO_WritePin(FLASH_Trig_GPIO_Port, FLASH_Trig_Pin, GPIO_PIN_RESET);
+        }
+        
+        
       }
+      
+      // test_pin = HAL_GPIO_ReadPin(SHUT_Trig_GPIO_Port, SHUT_Trig_Pin);
+      // if (test_pin == GPIO_PIN_SET){
+      //   tmp+=1;
+      // }
     }
 
     if ( (tim2_int_mask & TIM_INT200MS_MASK) != 0) {

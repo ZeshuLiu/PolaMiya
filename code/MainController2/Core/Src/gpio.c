@@ -140,7 +140,7 @@ void MX_GPIO_Init(void)
 /* USER CODE BEGIN 2 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-  extern uint8_t motor_start_cnt;
+  extern uint8_t motor_start_cnt, shut_trig_stat, motor_state;
   uint32_t tmp;
   static uint32_t SHUT_Tick = 0;
   if (GPIO_Pin == KEY0_Pin)
@@ -154,9 +154,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
   if (GPIO_Pin == SHUT_Trig_Pin)
   {
-    if (HAL_GetTick() - SHUT_Tick > 1000){
+    if (HAL_GetTick() - SHUT_Tick > 1000 && motor_state == 0){
       tmp = data_acq_stc() + 1;
       data_set_stc(1);
+      HAL_GPIO_WritePin(FLASH_Trig_GPIO_Port, FLASH_Trig_Pin, GPIO_PIN_SET);
+      shut_trig_stat = 1;
       SHUT_Tick = HAL_GetTick();
     }
   }
