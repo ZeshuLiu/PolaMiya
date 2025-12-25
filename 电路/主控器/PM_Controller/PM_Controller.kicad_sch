@@ -9652,6 +9652,10 @@
 		(uuid "850d1012-73ed-4c0d-abb3-18c97321873e")
 	)
 	(no_connect
+		(at 44.45 19.05)
+		(uuid "9e55c008-abe8-4de8-af23-aaac85efe5be")
+	)
+	(no_connect
 		(at 346.71 139.7)
 		(uuid "a0bcb14d-31d4-4de9-a076-a9b51ea8fd48")
 	)
@@ -10080,6 +10084,16 @@
 			(type default)
 		)
 		(uuid "16ec1f95-3e96-49e6-8394-44a2d03e4388")
+	)
+	(wire
+		(pts
+			(xy 16.51 199.39) (xy 16.51 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "171c9c22-bc93-4cab-86a0-e1ca65bf2814")
 	)
 	(wire
 		(pts
@@ -11033,7 +11047,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 21.59) (xy 129.54 21.59)
+			(xy 135.89 21.59) (xy 129.54 21.59)
 		)
 		(stroke
 			(width 0)
@@ -11213,16 +11227,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 19.05) (xy 60.96 19.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49ab5fe5-db66-41fa-8fce-6e043cfd4ffb")
-	)
-	(wire
-		(pts
 			(xy 48.26 158.75) (xy 73.66 158.75)
 		)
 		(stroke
@@ -11243,7 +11247,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 19.05) (xy 140.97 19.05)
+			(xy 129.54 19.05) (xy 142.24 19.05)
 		)
 		(stroke
 			(width 0)
@@ -11833,6 +11837,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 19.05) (xy 142.24 20.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d79c2ae-9b9d-4525-8bf8-f634d1527c2b")
+	)
+	(wire
+		(pts
 			(xy 20.32 171.45) (xy 20.32 168.91)
 		)
 		(stroke
@@ -11993,7 +12007,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 24.13) (xy 129.54 24.13)
+			(xy 135.89 24.13) (xy 129.54 24.13)
 		)
 		(stroke
 			(width 0)
@@ -12130,16 +12144,6 @@
 			(type default)
 		)
 		(uuid "7fe96de5-e636-4386-b687-73e8810a25fd")
-	)
-	(wire
-		(pts
-			(xy 25.4 198.12) (xy 25.4 199.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ff2f5cb-d1e3-4141-83a4-b015d4335b05")
 	)
 	(wire
 		(pts
@@ -12310,6 +12314,16 @@
 			(type default)
 		)
 		(uuid "86de8f0a-f126-40b2-9c96-4c66c940c50d")
+	)
+	(wire
+		(pts
+			(xy 17.78 199.39) (xy 16.51 199.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87001eb2-566a-4bc7-a839-c7c8bbfce098")
 	)
 	(polyline
 		(pts
@@ -12650,16 +12664,6 @@
 			(type default)
 		)
 		(uuid "99cd65a3-a426-4d8a-af0b-8729962a0ef0")
-	)
-	(wire
-		(pts
-			(xy 49.53 19.05) (xy 44.45 19.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a5aeefa-a740-4b1c-915b-995bdf9a5f4f")
 	)
 	(wire
 		(pts
@@ -13823,6 +13827,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 27.94) (xy 142.24 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da84c491-2a05-479a-a6f1-bece604160cd")
+	)
+	(wire
+		(pts
 			(xy 294.64 86.36) (xy 295.91 86.36)
 		)
 		(stroke
@@ -14812,7 +14826,7 @@
 		(uuid "1fc3fe26-644e-410f-988a-97fea0ee43e2")
 	)
 	(label "LPTX1"
-		(at 140.97 24.13 180)
+		(at 135.89 24.13 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -15131,6 +15145,16 @@
 		)
 		(uuid "58c0b551-a0b4-45de-b3ba-d832fab107da")
 	)
+	(label "BAT_OUT2"
+		(at 142.24 34.29 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f5c4d4f-5caf-45f2-8b62-0f062734e80f")
+	)
 	(label "I2C3_SCL"
 		(at 160.02 43.18 0)
 		(effects
@@ -15240,16 +15264,6 @@
 			(justify left bottom)
 		)
 		(uuid "7573cdf4-f367-4098-aa49-6d162cc6490f")
-	)
-	(label "BAT_OUT2"
-		(at 140.97 19.05 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "779d97eb-b47a-4233-a23f-bab0d25fee07")
 	)
 	(label "_FLASH_Trig_"
 		(at 191.77 154.94 0)
@@ -15702,7 +15716,7 @@
 		(uuid "c3fdfa26-6741-4c12-aa18-1843caa79884")
 	)
 	(label "LPRX1"
-		(at 140.97 21.59 180)
+		(at 135.89 21.59 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18035,73 +18049,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+2V5")
-		(at 60.96 19.05 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1b714457-58ac-4b2c-baab-17c38afa1462")
-		(property "Reference" "#PWR050"
-			(at 57.15 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+2V5"
-			(at 64.77 19.0499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+2V5\""
-			(at 60.96 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1009a232-0b12-49d1-a822-293bf123f04a")
-		)
-		(instances
-			(project "PM_Controller"
-				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
-					(reference "#PWR050")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 157.48 62.23 0)
 		(unit 1)
@@ -19665,7 +19612,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 25.4 198.12 0)
+		(at 16.51 195.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19674,7 +19621,7 @@
 		(fields_autoplaced yes)
 		(uuid "2cacdfdc-a923-44f1-96bb-24c17638fa58")
 		(property "Reference" "#PWR030"
-			(at 25.4 201.93 0)
+			(at 16.51 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19683,7 +19630,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 25.4 193.04 0)
+			(at 16.51 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19691,7 +19638,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 25.4 198.12 0)
+			(at 16.51 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19700,7 +19647,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 25.4 198.12 0)
+			(at 16.51 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19709,7 +19656,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 25.4 198.12 0)
+			(at 16.51 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21612,6 +21559,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:L")
+		(at 21.59 199.39 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45fd63f7-d8ef-470c-91f5-2909c99cf906")
+		(property "Reference" "L2"
+			(at 21.59 194.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uH"
+			(at 21.59 196.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_APV_APH0650"
+			(at 21.59 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 21.59 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 21.59 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7bac7ff6-a47b-4421-aff5-84a95fcd40c9")
+		)
+		(pin "2"
+			(uuid "d94a0c00-4559-458f-b37e-d5bbe2858375")
+		)
+		(instances
+			(project "PM_Controller"
+				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
+					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 41.91 213.36 0)
 		(unit 1)
@@ -22889,73 +22904,6 @@
 			(project "PM_Controller"
 				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
 					(reference "#PWR026")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 53.34 19.05 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "566062cd-05a7-4464-8c33-97e5a1da1e31")
-		(property "Reference" "P2V5"
-			(at 53.594 13.208 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 53.34 15.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 53.34 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 53.34 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 53.34 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "dc0454f4-c19f-4187-8878-a9ccf720b29c")
-		)
-		(pin "1"
-			(uuid "1df5c2e1-0989-4ae1-81f2-8754fb8d01dc")
-		)
-		(instances
-			(project "PM_Controller"
-				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
-					(reference "P2V5")
 					(unit 1)
 				)
 			)
@@ -33349,6 +33297,73 @@
 			(project "PM_Controller"
 				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
 					(reference "#PWR096")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 142.24 24.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fdd77ad5-2472-4280-87e2-f18a14f969e5")
+		(property "Reference" "L3"
+			(at 140.716 23.622 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.7uH"
+			(at 144.78 24.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_APV_APH0650"
+			(at 142.24 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 142.24 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72bc7111-73b7-4f0e-b4d5-dd978d7b262f")
+		)
+		(pin "2"
+			(uuid "fd67f13f-4ceb-4641-a6b8-2a11ecf3ed7a")
+		)
+		(instances
+			(project "PM_Controller"
+				(path "/7185bc4a-db7d-484e-8ff2-a58428806037"
+					(reference "L3")
 					(unit 1)
 				)
 			)
