@@ -1,4 +1,4 @@
-25616663509718012
+25641331375802172
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -66647,6 +66647,13 @@ solder jumper open
 3
 3
 KiCadLib
+DB17W2M
+
+
+0
+19
+18
+KiCadLib
 DBV0006A_TEX
 
 TPS2552DDBVR 
@@ -66668,6 +66675,41 @@ TPS2552DDBVR
 6
 6
 KiCadLib
+DKA15B-15
+
+
+0
+5
+5
+KiCadLib
+JILN3511216BMSS0BNA1
+
+
+0
+18
+17
+KiCadLib
+JILN3511232BMSS0BNA1
+
+
+0
+34
+33
+KiCadLib
+K6-6133D-L1-02
+
+
+0
+8
+8
+KiCadLib
+K7805M-1000R3
+
+
+0
+3
+3
+KiCadLib
 LCD1.69_240_280
 
 
@@ -66675,12 +66717,40 @@ LCD1.69_240_280
 12
 9
 KiCadLib
+MMCX-KWE
+
+
+0
+5
+2
+KiCadLib
 MPUPX2043 switch
 
 
 0
 4
 4
+KiCadLib
+MR01A-012
+
+
+0
+13
+10
+KiCadLib
+PJ-218X-SMT
+
+
+0
+4
+4
+KiCadLib
+RxDW60
+
+
+0
+6
+6
 KiCadLib
 SOIC127P600X175-8N
 <b>SOIC-8</b><br>
@@ -66695,6 +66765,34 @@ SSD1306_0.91_i2c
 0
 14
 14
+KiCadLib
+SideCon 2x04
+
+
+0
+8
+8
+KiCadLib
+SideCon 2x05
+
+
+0
+10
+10
+KiCadLib
+VRB24_HB-350WR3
+
+
+0
+9
+9
+KiCadLib
+VRF24_EB-150WR3
+
+
+0
+8
+8
 KiCadLib
 cr1220
 
