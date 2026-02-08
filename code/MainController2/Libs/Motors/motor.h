@@ -5,7 +5,7 @@
 
 #define MAX_PWM_WIDTH 10000-1
 #define PWM_FSPEED 7000-1
-#define MT_PWM_STEP 7
+#define MT_PWM_STEP 700
 
 void motor_init(void);
 void motor_start(void);

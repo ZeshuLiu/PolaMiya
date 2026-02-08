@@ -146,8 +146,8 @@ void LCD_Init(SPI_HandleTypeDef SPI_LCD)
 	LCD_RES_Set();
 	HAL_Delay(100);
 	
-	LCD_BLK_Set();//打开背光
-  	HAL_Delay(100);
+	// LCD_BLK_Set();//打开背光
+	HAL_Delay(100);
 	
 	//return;
 	//************* Start Initial Sequence **********//

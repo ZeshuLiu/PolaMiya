@@ -95,6 +95,7 @@ int main(void)
 
   extern UI_Layer normal_layer;
   extern uint8_t motor_state;
+	extern double BAT_V;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -175,8 +176,16 @@ int main(void)
 
     if ( (tim2_int_mask & TIM_INT1S_MASK) != 0){
       tim2_int_mask &= (~TIM_INT1S_MASK);
-      HAL_GPIO_TogglePin(KEY3_GPIO_Port, KEY3_Pin);
       Z_ADC_DMA_Start(&hadc1);
+			if (BAT_V > 3.0){
+				HAL_GPIO_TogglePin(KEY3_GPIO_Port, KEY3_Pin);
+				LCD_BLK_Set();
+			}
+			else{
+				HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_SET);
+				LCD_BLK_Clr();
+			}
+			
       TMP102_ReadTemperature();
     }
 
@@ -206,7 +215,6 @@ int main(void)
       tim2_int_mask &= (~TIM_INT300MS_MASK);
       if (motor_state == 0) sdm18_single_meter();
     }
-
 
     /* USER CODE END WHILE */
 
