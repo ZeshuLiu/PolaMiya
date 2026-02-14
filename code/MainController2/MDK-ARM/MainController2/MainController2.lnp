@@ -61,7 +61,7 @@
 "maincontroller2\sdm18.o"
 "maincontroller2\eeprom.o"
 "maincontroller2\datastore.o"
---strict --scatter "MainController2\MainController2.sct"
+--strict --scatter "stm32g474xx_flash.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "MainController2.map" -o MainController2\MainController2.axf

@@ -1,7 +1,7 @@
 maincontroller2/usb_device.o: ..\USB_Device\App\usb_device.c \
   ..\USB_Device\App\usb_device.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h \
-  ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g431xx.h \
+  ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g474xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
   ..\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h \
   ..\Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h \

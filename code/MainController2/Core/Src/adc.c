@@ -25,7 +25,7 @@
 
 uint16_t adc_values[ADC_N_CHANNEL] = {0x00};
 _Bool adc_busy = 0;
-double BAT_V, temperature_cd, vrefint;
+double BAT_V = 0, temperature_cd, vrefint;
 /* USER CODE END 0 */
 
 ADC_HandleTypeDef hadc1;
@@ -230,6 +230,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
   extern UI_Element batnum_elm_char16, CoreTempVal_elm_char16;
   extern char Coretemp_vals[3];
+	double BAT_V_t;
   // char tmp[6];
   float vref = 3.0f * (*VREFINT_CAL_ADDR) / adc_values[2];
   float TEMP30 = (*TEMP30_CAL_ADDR) *3 / vref;
@@ -237,7 +238,9 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
   if (hadc == &hadc1)
   {
     adc_busy = 0;
-    BAT_V = ( ( (double) (adc_values[0] & 0xfff) ) * vref/(4095.0) ) *2.0;
+    BAT_V_t = ( ( (double) (adc_values[0] & 0xfff) ) * vref/(4095.0) ) *2.0;
+		if (BAT_V == 0 || BAT_V-BAT_V_t > 2.0 || BAT_V_t-BAT_V > 2.0 ) BAT_V = BAT_V_t;
+		else BAT_V = 0.9*BAT_V + 0.1*BAT_V_t;	// 1阶次低通滤波， 时间常数=9s
     temperature_cd = ((adc_values[1] & 0xfff) - TEMP30) * (130.0 - 30.0) / (TEMP130 - TEMP30) + 30.0;
 
     float_to_str_1int_2frac(BAT_V, (char *) bat_volt_char);
