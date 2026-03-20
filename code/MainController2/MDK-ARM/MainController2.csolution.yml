@@ -5,7 +5,7 @@ solution:
   target-types:
     - type: MainController2
       device: STM32G474RETx
-      optimize: debug
+      optimize: none
       target-set:
         - set:
           images:

@@ -252,3 +252,4 @@ project:
         - file: ../Libs/EEPROM/DataStore.c
   components:
     - component: ARM::CMSIS:CORE
+    - component: CMSIS:DSP&Source

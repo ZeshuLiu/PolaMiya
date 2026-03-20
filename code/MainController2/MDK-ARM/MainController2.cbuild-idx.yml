@@ -12,8 +12,7 @@ build-idx:
       messages:
         info:
           - MainController2.cbuild-pack.yml - file is already up-to-date
-          - MainController2+MainController2.cbuild-run.yml - file generated successfully
-          - MainController2+MainController2.cbuild.yml - file generated successfully
+          - MainController2+MainController2.cbuild-run.yml - file is already up-to-date
+          - MainController2+MainController2.cbuild.yml - file is already up-to-date
       packs-unused:
-        - pack: ARM::CMSIS-DSP@1.16.2
         - pack: ARM::CMSIS-NN@4.1.0

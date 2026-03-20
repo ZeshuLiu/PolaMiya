@@ -246,13 +246,13 @@ CompileFlags:
     - "-D__MEMORY_SCOPE_SYSTEM=0\r\n"
     - "-D__MEMORY_SCOPE_WRKGRP=2\r\n"
     - "-D__MEMORY_SCOPE_WVFRNT=3\r\n"
+    - "-D__NO_INLINE__=1\r\n"
     - "-D__OBJC_BOOL_IS_BOOL=0\r\n"
     - "-D__OPENCL_MEMORY_SCOPE_ALL_SVM_DEVICES=3\r\n"
     - "-D__OPENCL_MEMORY_SCOPE_DEVICE=2\r\n"
     - "-D__OPENCL_MEMORY_SCOPE_SUB_GROUP=4\r\n"
     - "-D__OPENCL_MEMORY_SCOPE_WORK_GROUP=1\r\n"
     - "-D__OPENCL_MEMORY_SCOPE_WORK_ITEM=0\r\n"
-    - "-D__OPTIMIZE__=1\r\n"
     - "-D__ORDER_BIG_ENDIAN__=4321\r\n"
     - "-D__ORDER_LITTLE_ENDIAN__=1234\r\n"
     - "-D__ORDER_PDP_ENDIAN__=3412\r\n"
@@ -413,6 +413,8 @@ CompileFlags:
     - "-D__thumb__=1\r\n"
     - '-D__ARMCOMPILER_LIBCXX=1'
     - '-IE:/Develop/PolaMiya/code/MainController2/MDK-ARM/RTE/_MainController2'
+    - '-IC:/Users/LZS/AppData/Local/arm/packs/ARM/CMSIS-DSP/1.16.2/Include'
+    - '-IC:/Users/LZS/AppData/Local/arm/packs/ARM/CMSIS-DSP/1.16.2/PrivateInclude'
     - '-IC:/Users/LZS/AppData/Local/arm/packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include'
     - '-IE:/Develop/PolaMiya/code/MainController2/MDK-ARM/../Core/Inc'
     - >-
