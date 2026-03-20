@@ -1,5 +1,7 @@
 # ReadMe
 
+**代码仓库：[PolaMiyaSoftware](https://github.com/ZeshuLiu/PolaMiyaSoftware)**
+
 宝丽来相机一台，具有测距、电动吐片等功能。
 
 随后将加入如下功能：
@@ -25,8 +27,6 @@ PCB 在电路文件夹，使用 KiCad9 绘制。总共有三部分：1. 电机�
 
 
 ## 代码
-
-代码仓库：[PolaMiyaSoftware](https://github.com/ZeshuLiu/PolaMiyaSoftware)
 
 代码均采用 CubeMX 生成，Keil uVision 社区版编写。MainController2 的代码是给主控用的，PowerManage2 是给电源管理 mcu 用的。
 
