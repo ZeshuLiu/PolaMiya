@@ -59,18 +59,18 @@ UI_Element Cal_elm_char12;
 
 void zui_normal_layer_on_key(USR_KEY * key)
 {
-    extern uint8_t motor_state;
+    extern uint8_t motor_state_delay;
 
     keyval_vals[0] = key->key_index + '0' ;
     keyval_vals[2] = key->key_action + '0' ;
     keyval_elm_char16.dirty = 1;
 
     // 按键响应0
-    if (motor_state == 0 && key->key_index == 0 && key->key_action == 2)
+    if (motor_state_delay == 0 && key->key_index == 0 && key->key_action == 2)
     {
         motor_start();
     }
-    else if(motor_state == 1)
+    else if(motor_state_delay == 1)
     {
         // motor_end();
     }

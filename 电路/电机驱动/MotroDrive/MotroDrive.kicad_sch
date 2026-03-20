@@ -5,9 +5,10 @@
 	(uuid "791ff7e0-81a0-4288-9576-1071b96d7ac6")
 	(paper "A4")
 	(title_block
-		(date "2026-01-21")
-		(rev "1.1")
-		(comment 1 "修改了上电逻辑")
+		(date "2026-03-15")
+		(rev "1.2")
+		(comment 1 "R1.1 修改了上电逻辑")
+		(comment 2 "R1.2 升压二极管改为SS34，修改为单面布局，输入储能电容改为电源GND")
 	)
 	(lib_symbols
 		(symbol "2025-04-10_12-12-53:TLV61048DBVR"
@@ -1727,6 +1728,156 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:SS34"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SS34"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMA"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "40V 3A Schottky Diode, SMA"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*SMA*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SS34_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SS34_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Mechanical:MountingHole"
 			(pin_names
 				(offset 1.016)
@@ -2401,12 +2552,6 @@
 		(color 0 0 0 0)
 		(uuid "c72803fd-bc13-4058-b8be-e77dba2c6bd3")
 	)
-	(junction
-		(at 43.18 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e45793df-39d1-4026-8a94-67a3a7b06321")
-	)
 	(no_connect
 		(at 41.91 31.75)
 		(uuid "0b7bfa5c-07a8-4f25-aa26-f934a4f35404")
@@ -2467,13 +2612,23 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 100.33) (xy 43.18 101.6)
+			(xy 43.18 99.06) (xy 43.18 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1ac7183a-bb24-4c04-a30c-8f4356c77b58")
+	)
+	(wire
+		(pts
+			(xy 95.25 39.37) (xy 107.95 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e40c8a9-31e9-4246-b314-38b7a2460c0c")
 	)
 	(wire
 		(pts
@@ -2557,16 +2712,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 100.33) (xy 29.21 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "517c1c2f-0851-4a7a-a617-51e33dc9ebc9")
-	)
-	(wire
-		(pts
 			(xy 57.15 87.63) (xy 59.69 87.63)
 		)
 		(stroke
@@ -2617,16 +2762,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 100.33) (xy 43.18 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ec1f407-f18e-4bc8-a841-999bce674014")
-	)
-	(wire
-		(pts
 			(xy 113.03 78.74) (xy 123.19 78.74)
 		)
 		(stroke
@@ -2644,16 +2779,6 @@
 			(type default)
 		)
 		(uuid "8e0d4e54-f191-4e13-a576-7063b0c6d41c")
-	)
-	(wire
-		(pts
-			(xy 29.21 91.44) (xy 29.21 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f23d054-97d6-46b7-be12-34e252a016dd")
 	)
 	(wire
 		(pts
@@ -2694,16 +2819,6 @@
 			(type default)
 		)
 		(uuid "9fe143c5-100e-48af-a5f8-d635661441bb")
-	)
-	(wire
-		(pts
-			(xy 43.18 99.06) (xy 43.18 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a0dae5f9-5353-44f0-9c12-bde075e550c5")
 	)
 	(wire
 		(pts
@@ -2867,16 +2982,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 87.63) (xy 43.18 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6b01706-057e-413d-8c05-dd3395ecfb8f")
-	)
-	(wire
-		(pts
 			(xy 43.18 91.44) (xy 43.18 87.63)
 		)
 		(stroke
@@ -2967,6 +3072,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 30.48) (xy 107.95 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f623d9a2-8597-44ec-ad73-40b261cdc41f")
+	)
+	(wire
+		(pts
 			(xy 208.28 90.17) (xy 208.28 87.63)
 		)
 		(stroke
@@ -2994,6 +3109,16 @@
 			(justify right bottom)
 		)
 		(uuid "00dfa6a6-af33-4854-a399-0bfb6d7ac75e")
+	)
+	(label "POWER_GND"
+		(at 95.25 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06f8e1dc-d628-4aca-a74b-6b1cc325b00b")
 	)
 	(label "Motor+"
 		(at 147.32 57.15 0)
@@ -4101,6 +4226,73 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
+		(at 107.95 30.48 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6d6ff383-576a-4a7a-ac98-fbb7d0681225")
+		(property "Reference" "#PWR010"
+			(at 107.95 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 107.95 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 107.95 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 107.95 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "83037676-66c1-4d32-8401-4e57deee3c02")
+		)
+		(instances
+			(project "MotroDrive"
+				(path "/791ff7e0-81a0-4288-9576-1071b96d7ac6"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+BATT")
 		(at 57.15 26.67 270)
 		(mirror x)
 		(unit 1)
@@ -4305,7 +4497,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 29.21 95.25 0)
+		(at 107.95 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4314,7 +4506,7 @@
 		(fields_autoplaced yes)
 		(uuid "8f21c489-9a81-49d7-8012-fb76d5b10e03")
 		(property "Reference" "C4"
-			(at 33.02 93.0909 0)
+			(at 111.76 33.4009 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4323,7 +4515,7 @@
 			)
 		)
 		(property "Value" "100uf"
-			(at 33.02 95.6309 0)
+			(at 111.76 35.9409 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4332,7 +4524,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x7.7"
-			(at 30.1752 99.06 0)
+			(at 108.9152 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4341,7 +4533,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 29.21 95.25 0)
+			(at 107.95 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4350,7 +4542,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 29.21 95.25 0)
+			(at 107.95 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4368,74 +4560,6 @@
 			(project "MotroDrive"
 				(path "/791ff7e0-81a0-4288-9576-1071b96d7ac6"
 					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N5819WS")
-		(at 107.95 78.74 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9526fe9e-f234-43f1-8991-dc392a4b423c")
-		(property "Reference" "D1"
-			(at 108.2675 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N5819WS"
-			(at 108.2675 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
-			(at 107.95 74.295 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
-			(at 107.95 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323"
-			(at 107.95 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d342c68c-b6ba-4ec0-ab24-0738ce0a9443")
-		)
-		(pin "1"
-			(uuid "80231533-414c-4eff-b0eb-e9a30b1b9319")
-		)
-		(instances
-			(project ""
-				(path "/791ff7e0-81a0-4288-9576-1071b96d7ac6"
-					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -4990,6 +5114,74 @@
 			(project ""
 				(path "/791ff7e0-81a0-4288-9576-1071b96d7ac6"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:SS34")
+		(at 107.95 78.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eed5ed05-7f34-452a-a908-199fc927ab4d")
+		(property "Reference" "D2"
+			(at 108.2675 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS34"
+			(at 108.2675 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 107.95 74.295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/88751/ss32.pdf"
+			(at 107.95 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "40V 3A Schottky Diode, SMA"
+			(at 107.95 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c6fa3222-b346-40b3-8995-ad4aebea8b5f")
+		)
+		(pin "2"
+			(uuid "74ce1f88-6539-4663-966f-952edd63696c")
+		)
+		(instances
+			(project ""
+				(path "/791ff7e0-81a0-4288-9576-1071b96d7ac6"
+					(reference "D2")
 					(unit 1)
 				)
 			)

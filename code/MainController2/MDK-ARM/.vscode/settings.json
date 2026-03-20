@@ -12,5 +12,10 @@
         "usart.h": "c",
         "eeprom.h": "c",
         "datastore.h": "c"
-    }
+    },
+    "debug.hideSlowPreLaunchWarning": true,
+    "debug.showInStatusBar": "never",
+    "clangd.arguments": [
+        "--compile-commands-dir=e:\\Develop\\PolaMiya\\code\\MainController2\\MDK-ARM\\out\\MainController2\\MainController2"
+    ]
 }
