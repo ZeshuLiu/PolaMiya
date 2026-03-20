@@ -27,7 +27,7 @@
             ],
             "defines": [
                 "USE_HAL_DRIVER",
-                "STM32G431xx",
+                "STM32G474xx",
                 "__alignof__(x)=",
                 "__asm(x)=",
                 "__asm__(x)=",
