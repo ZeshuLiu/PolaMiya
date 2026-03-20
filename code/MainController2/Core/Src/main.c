@@ -57,7 +57,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t tim2_int_mask = 0;
+volatile uint8_t tim2_int_mask = 0;
 const GPIO_TypeDef * KEY_Ports[USR_KEY_COUNT] = {KEY0_GPIO_Port, KEY1_GPIO_Port, KEY2_GPIO_Port};
 const uint16_t KEY_Pins[USR_KEY_COUNT] = {KEY0_Pin, KEY1_Pin, KEY2_Pin};
 USR_KEY USR_KEYs[USR_KEY_COUNT];
@@ -65,8 +65,6 @@ extern double BAT_V, temperature_cd;
 extern UI_Element zui_elm_char12;
 extern UI_Element bat_elm_char16;
 extern UI_Element batnum_elm_char16;
-GPIO_PinState test_pin;
-uint8_t tmp = 0;
 uint8_t shut_trig_stat = 0;
 /* USER CODE END PV */
 
@@ -90,11 +88,9 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  uint8_t a = 0;
-	uint16_t * b = 0;
 
   extern UI_Layer normal_layer;
-  extern uint8_t motor_state;
+  extern uint8_t motor_state, motor_state_delay;
 	extern double BAT_V;
   /* USER CODE END 1 */
 
@@ -185,7 +181,7 @@ int main(void)
 				HAL_GPIO_WritePin(KEY3_GPIO_Port, KEY3_Pin, GPIO_PIN_SET);
 				LCD_BLK_Clr();
 			}
-			
+
       TMP102_ReadTemperature();
     }
 
@@ -208,12 +204,14 @@ int main(void)
 
     if ( (tim2_int_mask & TIM_INT200MS_MASK) != 0) {
       tim2_int_mask &= (~TIM_INT200MS_MASK);
+      if (motor_state_delay == 1 && motor_state == 0) motor_state_delay = 2;
+      if (motor_state_delay == 2) motor_state_delay = 0;
       zui_render_current_layer();
     }
 
     if ( (tim2_int_mask & TIM_INT300MS_MASK) != 0) {
       tim2_int_mask &= (~TIM_INT300MS_MASK);
-      if (motor_state == 0) sdm18_single_meter();
+      if (motor_state_delay == 0) sdm18_single_meter();
     }
 
     /* USER CODE END WHILE */

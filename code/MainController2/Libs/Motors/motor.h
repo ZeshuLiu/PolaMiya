@@ -3,8 +3,8 @@
 
 #include "main.h"
 
-#define MAX_PWM_WIDTH 10000-1
-#define PWM_FSPEED 7000-1
+#define MAX_PWM_WIDTH (10000U-1U)
+#define PWM_FSPEED (7000U-1U)
 #define MT_PWM_STEP 700
 
 void motor_init(void);
