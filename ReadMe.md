@@ -20,21 +20,27 @@
 
 ## 说明
 
-项目比较简单，需要采购的大件只有两个，一个 Mamiya Press 127mm 镜头（不需要调焦桶）以及一个宝丽来 AF5000（需要里面的吐片下巴、吐片电机和齿轮组。宝丽来的老方块机器里面这些零件看起来都是一样的，但是我没试过）。
+项目比较简单，需要采购的大件只有两个：
+- Mamiya Press 127mm 镜头（不需要调焦桶）
+- 宝丽来 AF5000（需要里面的吐片下巴、吐片电机和齿轮组）
 
-结构文件夹里面就是机械零件，把镜头总成、片仓、吐片机构以及外壳里面的"STL"子文件夹里面的所有 STL 都 3D 打印出来就行了，装配可以参考总装配 Rev_x.STEP。零件体积都比较小，可以用 A1 mini 或者 Voron0 打印。
-
-
-
-## PCB
-
-PCB 在电路文件夹，使用 KiCad9 绘制。总共有三部分：1. 电机驱动（电路\电机驱动\MotorDrive）；2. 主控器（电路\主控器\PM_Controller_R1）；3. 屏幕&按键（电路\主控器\DispKey）。所有制造所需的 Gerber 文件以及元器件清单在"production"子目录中。
+详细的结构件和装配说明请参考 **[PolaMiyaHardware](https://github.com/ZeshuLiu/PolaMiyaHardware)** 仓库。
 
 
 
-## 代码
+## 硬件设计
 
-代码均采用 CubeMX 生成，Keil uVision 社区版编写。MainController2 的代码是给主控用的，PowerManage2 是给电源管理 mcu 用的。
+电路及结构设计文件位于 **[PolaMiyaHardware](https://github.com/ZeshuLiu/PolaMiyaHardware)** 仓库，包含：
+- PCB 设计
+- 3D 打印结构件
+- 装配图纸
+
+## 软件代码
+
+源代码位于 **[PolaMiyaSoftware](https://github.com/ZeshuLiu/PolaMiyaSoftware)** 仓库，包含：
+- 主控器固件（MainController2）
+- 电源管理固件（PowerManage2）
+- CubeMX 配置及 Keil uVision 工程
 
 
 
@@ -46,24 +52,25 @@ PCB 在电路文件夹，使用 KiCad9 绘制。总共有三部分：1. 电机�
 
 ## 样片
 
-稍后附上。
+![样片 1](样片/raw0060_1.jpg)
+![样片 2](样片/20260124-raw0069.jpg)
+![样片 3](样片/20260329-raw0093.jpg)
+![样片 4](样片/20260329-raw0098.jpg)
+![样片 5](样片/20260329-raw0103.jpg)
+![样片 6](样片/20260329-raw0106.jpg)
 
 
 
 ## 后续计划
 
-1. 调整显示内容，提升美感
-2. 自动对焦
-3. 测光
-4. 全息取景器（已开始设计）
+1. 测光
+2. 全息取景器（已开始设计）
 
 
 
 ## 已知问题
 
-1. 吐片口密封性能不好，严禁在有相纸的情况下打开片仓
-
-**
+1. 吐片口密封性能不好，严禁在有相纸的情况下打开片仓（不中途打开片仓密封性没有问题）
 
 
 
